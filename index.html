@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Nuevo Amanecer</title>
+</head>
+
+<body>
+    <div class="bg-image" style="background: url('./assets/img/bgMainIMG.jpg') repeat-x center center fixed; background-size: cover; 
+            overflow-x: hidden;">
+
+        <header>
+            <p class="d-flex justify-content-center text-white p-1" style="background-color: #834F29;"><b>UN NUEVO
+                    INICIO PARA TUS MAÑANAS</b></p>
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- LOGO -->
+                        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                            <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" />
+                        </a>
+                        <!-- Opciones de Navbar -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/maquinas.html">MAQUINAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/capsulas.html">CÁPSULAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">FILTROS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">CAFÉ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Perfil y Carrito -->
+                    <div class="d-flex align-items-center">
+                        <!-- Carrito -->
+                        <a class="link-secondary m-2" href="./pages/carrito.html">
+                            <img src="./assets/img/cart.png" height="60">
+                        </a>
+                        <!-- Perfil -->
+
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                                data-bs-display="static" aria-expanded="false">
+                                <img src="./assets/img/user-icon-white.png" class="rounded-circle" height="25" />
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end">
+                                <img src="./assets/img/user-icon.png" class="m-1 rounded-circle" height="25" />
+                                Usuario
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Mi Cuenta</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"></a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container mx-auto d-flex mt-4">
+                <!-- Columnas de Productos -->
+                <div class="col-lg-9 col-md-9 col-sm-12 " style="margin-left: -2rem;">
+                    <div class="row mt-2">
+                        <!-- Columna 1 -->
+                        <div class="col-lg-4 col-md-12 col-sm-12 w-sm-25 mt-3">
+                            <div class="card bg-light bg-opacity-50" style="border-radius: 2rem;">
+                                <img class="card-img-top w-50 m-auto mt-3" src="./assets/img/prod1.png" alt="Product">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">NOMBRE PRODUCTO</h5>
+                                    <p class="card-text text-center"> Esto es una descripcion generica para mi producto
+                                        que luego se
+                                        posicionara aqui!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Columna 2 -->
+                        <div class="col-lg-4 col-md-12 col-sm-12 mt-3">
+                            <div class="card bg-light bg-opacity-50" style="border-radius: 2rem;">
+                                <img class="card-img-top w-50 m-auto mt-3" src="./assets/img/prod1.png" alt="Product">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">NOMBRE PRODUCTO</h5>
+                                    <p class="card-text text-center"> Esto es una descripcion generica para mi producto
+                                        que luego se
+                                        posicionara aqui!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Columna 3 -->
+                        <div class="col-lg-4 d-lg-block d-none mt-3">
+                            <div class="card bg-light bg-opacity-50" style="border-radius: 2rem;">
+                                <img class="card-img-top w-50 m-auto mt-3" src="./assets/img/prod1.png" alt="Product">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">NOMBRE PRODUCTO</h5>
+                                    <p class="card-text text-center"> Esto es una descripcion generica para mi producto
+                                        que luego se
+                                        posicionara aqui!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Columna 4 -->
+                        <div class="col-lg-4 d-lg-block d-none mt-3">
+                            <div class="card bg-light bg-opacity-50" style="border-radius: 2rem;">
+                                <img class="card-img-top w-50 m-auto mt-3" src="./assets/img/prod1.png" alt="Product">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">NOMBRE PRODUCTO</h5>
+                                    <p class="card-text text-center"> Esto es una descripcion generica para mi producto
+                                        que luego se
+                                        posicionara aqui!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Columna 5 -->
+                        <div class="col-lg-4 d-lg-block d-none mt-3">
+                            <div class="card bg-light bg-opacity-50" style="border-radius: 2rem;">
+                                <img class="card-img-top w-50 m-auto mt-3" src="./assets/img/prod1.png" alt="Product">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">NOMBRE PRODUCTO</h5>
+                                    <p class="card-text text-center"> Esto es una descripcion generica para mi producto
+                                        que luego se
+                                        posicionara aqui!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Columna 6 -->
+                        <div class="col-lg-4 d-lg-block d-none mt-3">
+                            <div class="card bg-light bg-opacity-50" style="border-radius: 2rem;">
+                                <img class="card-img-top w-50 m-auto mt-3" src="./assets/img/prod1.png" alt="Product">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">NOMBRE PRODUCTO</h5>
+                                    <p class="card-text text-center"> Esto es una descripcion generica para mi producto
+                                        que luego se
+                                        posicionara aqui!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Coluna de Cafetera -->
+                <div class="d-lg-block d-md-block d-none">
+                    <img class="ml-5" style="height: 40rem; width: auto; margin-left: 2rem;"
+                        src="./assets/img/maquina-cafe.png" alt="No Disponible">
+                </div>
+            </div>
+
+            <div class="container mx-auto d-flex mt-4">
+                <div class="col-lg-9 col-md-9 col-sm-12 " style="margin-left: -2rem;">
+                    <div class="row mt-2">
+                        <div class="col-12 bg-light bg-opacity-50"
+                            style="border-radius: 2rem;">
+                            <div class="row d-flex justify-content-between" style="margin-left: 1rem; margin-right: 1rem;">
+                                <!-- Columna 1 -->
+                                <div class="col-lg-3 col-md-4 col-sm-5 mt-3">
+                                    <div class="card bg-light bg-opacity-25 mb-3" style=" border-radius: 2rem;">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <p class="card-title text-white" style="width: 15rem;">USER NAME</p>
+                                                <img class="img-fluid" style="width: 100%;" src="./assets/img/circle-fill.svg"
+                                                    alt="User">
+                                            </div>
+                                            <p class="card-text text-white d-none d-lg-block d-xl-block"
+                                                style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
+                                                nunc sed rhoncus. Nunc justo erat, eleifend congue velit at, luctus mattis dui.
+                                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                                                turpis egestas.
+                                            </p>
+                                            <p class="card-text text-white d-lg-none d-xl-none"
+                                                style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
+                                                nunc sed rhoncus...
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Columna 2 -->
+                                <div class="col-lg-3 col-md-4 col-sm-5 mt-3">
+                                    <div class="card bg-light bg-opacity-25 mb-3" style=" border-radius: 2rem;">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <p class="card-title text-white" style="width: 15rem;">USER NAME</p>
+                                                <img class="img-fluid" style="width: 100%;" src="./assets/img/circle-fill.svg"
+                                                    alt="User">
+                                            </div>
+                                            <p class="card-text text-white d-none d-lg-block d-xl-block"
+                                                style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
+                                                nunc sed rhoncus. Nunc justo erat, eleifend congue velit at, luctus mattis dui.
+                                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                                                turpis egestas.
+                                            </p>
+                                            <p class="card-text text-white d-lg-none d-xl-none"
+                                                style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
+                                                nunc sed rhoncus...
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Columna 3 -->
+                                <div class="col-lg-3 col-md-4 mt-3 d-lg-block d-md-block d-none">
+                                    <div class="card bg-light bg-opacity-25 mb-3" style=" border-radius: 2rem;">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <p class="card-title text-white" style="width: 15rem;">USER NAME</p>
+                                                <img class="img-fluid" style="width: 100%;" src="./assets/img/circle-fill.svg"
+                                                    alt="User">
+                                            </div>
+                                            <p class="card-text text-white d-none d-lg-block d-xl-block"
+                                                style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
+                                                nunc sed rhoncus. Nunc justo erat, eleifend congue velit at, luctus mattis dui.
+                                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                                                turpis egestas.
+                                            </p>
+                                            <p class="card-text text-white d-lg-none d-xl-none"
+                                                style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
+                                                nunc sed rhoncus...
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Columna 4 -->
+                                <div class="col-lg-3 col-md-4 mt-3 d-lg-block d-none">
+                                    <div class="card bg-light bg-opacity-25 mb-3" style=" border-radius: 2rem;">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <p class="card-title text-white" style="width: 15rem;">USER NAME</p>
+                                                <img class="img-fluid" style="width: 100%;" src="./assets/img/circle-fill.svg"
+                                                    alt="User">
+                                            </div>
+                                            <p class="card-text text-white d-none d-lg-block d-xl-block"
+                                                style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
+                                                nunc sed rhoncus. Nunc justo erat, eleifend congue velit at, luctus mattis dui.
+                                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                                                turpis egestas.
+                                            </p>
+                                            <p class="card-text text-white d-lg-none d-xl-none"
+                                                style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
+                                                nunc sed rhoncus...
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 bg-dark">
+                            <h4>Sobre Nosotros</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a nunc sed rhoncus.
+                                Nunc
+                                justo erat, eleifend congue velit at, luctus mattis dui. Pellentesque habitant morbi tristique
+                                senectus et netus et malesuada fames ac turpis egestas. Nullam tincidunt dapibus nulla, volutpat
+                                tristique ex varius in. Aliquam cursus, tortor ac rutrum posuere, nibh felis ultrices leo, at
+                                dictum
+                                justo dui vel velit. Aliquam et tortor id eros ullamcorper ornare. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </main>
+        <footer>
+            <a href="../pages/servicioTecnico.html">SERVICIO TÉCNICO - SOBRE NOSOTROS</a>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
