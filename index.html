@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>Nuevo Amanecer</title>
@@ -13,7 +14,6 @@
 <body>
     <div class="bg-image" style="background: url('./assets/img/bgMainIMG.jpg') repeat-x center center fixed; background-size: cover; 
             overflow-x: hidden;">
-
         <header>
             <p class="d-flex justify-content-center text-white p-1" style="background-color: #834F29;"><b>UN NUEVO
                     INICIO PARA TUS MAÑANAS</b></p>
@@ -22,7 +22,7 @@
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- LOGO -->
-                        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                        <a class="navbar-brand mt-2 mt-lg-0" href="./index.html         ">
                             <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" />
                         </a>
                         <!-- Opciones de Navbar -->
@@ -83,7 +83,10 @@
                         <!-- Columna 1 -->
                         <div class="col-lg-4 col-md-12 col-sm-12 w-sm-25 mt-3">
                             <div class="card bg-light bg-opacity-50" style="border-radius: 2rem;">
-                                <img class="card-img-top w-50 m-auto mt-3" src="./assets/img/prod1.png" alt="Product">
+                                <img class="card-img-top w-25 m-auto mt-3 d-lg-none d-xl-none"
+                                    src="./assets/img/prod1.png" alt="Product">
+                                <img class="card-img-top w-50 m-auto mt-3 d-none d-lg-block d-xl-block"
+                                    src="./assets/img/prod1.png" alt="Product">
                                 <div class="card-body">
                                     <h5 class="card-title text-center">NOMBRE PRODUCTO</h5>
                                     <p class="card-text text-center"> Esto es una descripcion generica para mi producto
@@ -95,7 +98,10 @@
                         <!-- Columna 2 -->
                         <div class="col-lg-4 col-md-12 col-sm-12 mt-3">
                             <div class="card bg-light bg-opacity-50" style="border-radius: 2rem;">
-                                <img class="card-img-top w-50 m-auto mt-3" src="./assets/img/prod1.png" alt="Product">
+                                <img class="card-img-top w-25 m-auto mt-3 d-lg-none d-xl-none"
+                                    src="./assets/img/prod1.png" alt="Product">
+                                <img class="card-img-top w-50 m-auto mt-3 d-none d-lg-block d-xl-block"
+                                    src="./assets/img/prod1.png" alt="Product">
                                 <div class="card-body">
                                     <h5 class="card-title text-center">NOMBRE PRODUCTO</h5>
                                     <p class="card-text text-center"> Esto es una descripcion generica para mi producto
@@ -155,134 +161,157 @@
                     </div>
                 </div>
                 <!-- Coluna de Cafetera -->
-                <div class="d-lg-block d-md-block d-none">
+                <div class="d-lg-block d-none">
                     <img class="ml-5" style="height: 40rem; width: auto; margin-left: 2rem;"
+                        src="./assets/img/maquina-cafe.png" alt="No Disponible">
+                </div>
+                <div class="d-md-block d-none">
+                    <img class="ml-5" style="height: 35rem; width: auto; margin-left: 2rem;"
                         src="./assets/img/maquina-cafe.png" alt="No Disponible">
                 </div>
             </div>
 
-            <div class="container mx-auto d-flex mt-4">
-                <div class="col-lg-9 col-md-9 col-sm-12 " style="margin-left: -2rem;">
-                    <div class="row mt-2">
-                        <div class="col-12 bg-light bg-opacity-50"
-                            style="border-radius: 2rem;">
-                            <div class="row d-flex justify-content-between" style="margin-left: 1rem; margin-right: 1rem;">
-                                <!-- Columna 1 -->
-                                <div class="col-lg-3 col-md-4 col-sm-5 mt-3">
-                                    <div class="card bg-light bg-opacity-25 mb-3" style=" border-radius: 2rem;">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center">
-                                                <p class="card-title text-white" style="width: 15rem;">USER NAME</p>
-                                                <img class="img-fluid" style="width: 100%;" src="./assets/img/circle-fill.svg"
-                                                    alt="User">
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-lg-9 col-md-9 col-sm-12">
+                        <div class="row mt-2">
+                            <div class="bg-light bg-opacity-50"
+                                style="border-radius: 2rem; margin-left: -1rem; margin-right: -1rem;">
+                                <div class="row d-flex justify-content-around"
+                                    style="margin-left: 1rem; margin-right: 1rem;">
+                                    <!-- Columna 1 -->
+                                    <div class="col-lg-3 col-md-4 col-sm-5 mt-3">
+                                        <div class="card bg-light bg-opacity-25 mb-3" style=" border-radius: 2rem;">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center">
+                                                    <p class="card-title text-white" style="width: 15rem;">USER NAME</p>
+                                                    <img class="img-fluid" style="width: 100%;"
+                                                        src="./assets/img/circle-fill.svg" alt="User">
+                                                </div>
+                                                <p class="card-text text-white d-none d-lg-block d-xl-block"
+                                                    style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                                    rutrum a
+                                                    nunc sed rhoncus. Nunc justo erat, eleifend congue velit at, luctus
+                                                    mattis dui.
+                                                </p>
+                                                <p class="card-text text-white d-lg-none d-xl-none"
+                                                    style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                                    rutrum a
+                                                    nunc sed rhoncus...
+                                                </p>
                                             </div>
-                                            <p class="card-text text-white d-none d-lg-block d-xl-block"
-                                                style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
-                                                nunc sed rhoncus. Nunc justo erat, eleifend congue velit at, luctus mattis dui.
-                                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-                                                turpis egestas.
-                                            </p>
-                                            <p class="card-text text-white d-lg-none d-xl-none"
-                                                style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
-                                                nunc sed rhoncus...
-                                            </p>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- Columna 2 -->
-                                <div class="col-lg-3 col-md-4 col-sm-5 mt-3">
-                                    <div class="card bg-light bg-opacity-25 mb-3" style=" border-radius: 2rem;">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center">
-                                                <p class="card-title text-white" style="width: 15rem;">USER NAME</p>
-                                                <img class="img-fluid" style="width: 100%;" src="./assets/img/circle-fill.svg"
-                                                    alt="User">
+                                    <!-- Columna 2 -->
+                                    <div class="col-lg-3 col-md-4 col-sm-5 mt-3">
+                                        <div class="card bg-light bg-opacity-25 mb-3" style=" border-radius: 2rem;">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center">
+                                                    <p class="card-title text-white" style="width: 15rem;">USER NAME</p>
+                                                    <img class="img-fluid" style="width: 100%;"
+                                                        src="./assets/img/circle-fill.svg" alt="User">
+                                                </div>
+                                                <p class="card-text text-white d-none d-lg-block d-xl-block"
+                                                    style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                                    rutrum a
+                                                    nunc sed rhoncus. Nunc justo erat, eleifend congue velit at, luctus
+                                                    mattis dui.
+                                                </p>
+                                                <p class="card-text text-white d-lg-none d-xl-none"
+                                                    style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                                    rutrum a
+                                                    nunc sed rhoncus...
+                                                </p>
                                             </div>
-                                            <p class="card-text text-white d-none d-lg-block d-xl-block"
-                                                style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
-                                                nunc sed rhoncus. Nunc justo erat, eleifend congue velit at, luctus mattis dui.
-                                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-                                                turpis egestas.
-                                            </p>
-                                            <p class="card-text text-white d-lg-none d-xl-none"
-                                                style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
-                                                nunc sed rhoncus...
-                                            </p>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- Columna 3 -->
-                                <div class="col-lg-3 col-md-4 mt-3 d-lg-block d-md-block d-none">
-                                    <div class="card bg-light bg-opacity-25 mb-3" style=" border-radius: 2rem;">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center">
-                                                <p class="card-title text-white" style="width: 15rem;">USER NAME</p>
-                                                <img class="img-fluid" style="width: 100%;" src="./assets/img/circle-fill.svg"
-                                                    alt="User">
+                                    <!-- Columna 3 -->
+                                    <div class="col-lg-3 col-md-4 mt-3 d-lg-block d-md-block d-none">
+                                        <div class="card bg-light bg-opacity-25 mb-3" style=" border-radius: 2rem;">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center">
+                                                    <p class="card-title text-white" style="width: 15rem;">USER NAME</p>
+                                                    <img class="img-fluid" style="width: 100%;"
+                                                        src="./assets/img/circle-fill.svg" alt="User">
+                                                </div>
+                                                <p class="card-text text-white d-none d-lg-block d-xl-block"
+                                                    style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                                    rutrum a
+                                                    nunc sed rhoncus. Nunc justo erat, eleifend congue velit at, luctus
+                                                    mattis dui.
+                                                </p>
+                                                <p class="card-text text-white d-lg-none d-xl-none"
+                                                    style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                                    rutrum a
+                                                    nunc sed rhoncus...
+                                                </p>
                                             </div>
-                                            <p class="card-text text-white d-none d-lg-block d-xl-block"
-                                                style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
-                                                nunc sed rhoncus. Nunc justo erat, eleifend congue velit at, luctus mattis dui.
-                                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-                                                turpis egestas.
-                                            </p>
-                                            <p class="card-text text-white d-lg-none d-xl-none"
-                                                style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
-                                                nunc sed rhoncus...
-                                            </p>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- Columna 4 -->
-                                <div class="col-lg-3 col-md-4 mt-3 d-lg-block d-none">
-                                    <div class="card bg-light bg-opacity-25 mb-3" style=" border-radius: 2rem;">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center">
-                                                <p class="card-title text-white" style="width: 15rem;">USER NAME</p>
-                                                <img class="img-fluid" style="width: 100%;" src="./assets/img/circle-fill.svg"
-                                                    alt="User">
+                                    <!-- Columna 4 -->
+                                    <div class="col-lg-3 col-md-4 mt-3 d-lg-block d-none">
+                                        <div class="card bg-light bg-opacity-25 mb-3" style=" border-radius: 2rem;">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center">
+                                                    <p class="card-title text-white" style="width: 15rem;">USER NAME</p>
+                                                    <img class="img-fluid" style="width: 100%;"
+                                                        src="./assets/img/circle-fill.svg" alt="User">
+                                                </div>
+                                                <p class="card-text text-white d-none d-lg-block d-xl-block"
+                                                    style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                                    rutrum a
+                                                    nunc sed rhoncus. Nunc justo erat, eleifend congue velit at, luctus
+                                                    mattis dui.
+                                                </p>
+                                                <p class="card-text text-white d-lg-none d-xl-none"
+                                                    style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                                    rutrum a
+                                                    nunc sed rhoncus...
+                                                </p>
                                             </div>
-                                            <p class="card-text text-white d-none d-lg-block d-xl-block"
-                                                style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
-                                                nunc sed rhoncus. Nunc justo erat, eleifend congue velit at, luctus mattis dui.
-                                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-                                                turpis egestas.
-                                            </p>
-                                            <p class="card-text text-white d-lg-none d-xl-none"
-                                                style=" font-family: 'Karla'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px;">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
-                                                nunc sed rhoncus...
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 bg-dark">
-                            <h4>Sobre Nosotros</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a nunc sed rhoncus.
-                                Nunc
-                                justo erat, eleifend congue velit at, luctus mattis dui. Pellentesque habitant morbi tristique
-                                senectus et netus et malesuada fames ac turpis egestas. Nullam tincidunt dapibus nulla, volutpat
-                                tristique ex varius in. Aliquam cursus, tortor ac rutrum posuere, nibh felis ultrices leo, at
-                                dictum
-                                justo dui vel velit. Aliquam et tortor id eros ullamcorper ornare. </p>
-                        </div>
+                    </div>
+                    <div class="col-lg-3 bg-opacity-50 d-none d-lg-block" 
+                        style="background-color: #834F29; border-radius: 1rem;">
+                        <p class="h4 text-center mt-2">Sobre Nosotros</p>
+                        <p class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
+                            nunc
+                            sed rhoncus.
+                            Nunc
+                            justo erat, eleifend congue velit at, luctus mattis dui. Pellentesque habitant morbi
+                            tristique
+                            senectus et netus et malesuada fames ac turpis egestas.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 bg-opacity-50 d-md-none d-lg-none mt-4" 
+                        style="background-color: #834F29; border-radius: 1rem;">
+                        <p class="h4 text-center mt-2">Sobre Nosotros</p>
+                        <p class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
+                            nunc
+                            sed rhoncus.
+                            Nunc
+                            justo erat, eleifend congue velit at, luctus mattis dui. Pellentesque habitant morbi
+                            tristique
+                            senectus et netus et malesuada fames ac turpis egestas.
+                        </p>
                     </div>
                 </div>
             </div>
-            
-
         </main>
-        <footer>
-            <a href="../pages/servicioTecnico.html">SERVICIO TÉCNICO - SOBRE NOSOTROS</a>
+        <footer class="mt-4">
+            <a class="text-center text-white d-block fs-5" style="background-color: #834F29; text-decoration: none;" href="../pages/servicioTecnico.html">SERVICIO TÉCNICO - SOBRE NOSOTROS</a>
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
