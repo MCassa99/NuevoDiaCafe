@@ -1,0 +1,289 @@
+html{
+    background: url("../assets/img/bgMainIMG.jpg") repeat-x center center fixed; 
+    background-size: cover;
+    opacity: 1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header > p{
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: .5rem;
+    background-color: #B56C38;
+}
+
+.cart{
+    margin-left: auto;
+}
+
+.user {
+    margin-left: auto;
+}
+
+.cart img{
+    width: 3rem;
+}
+
+.user img{
+    width: 3rem;
+}
+
+nav {
+    padding: 10px;
+
+    @media (min-width: 600px){
+        padding: 20px;
+    }
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    color: grey;
+}
+
+a:hover {
+    color: white;
+
+    &::before {
+        background: whitesmoke;               
+    }
+}
+
+.pagenav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {        
+        display: flex;
+        align-items: center;
+    }
+
+    ul li {
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+}
+
+.nav-bar {
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.user-menu{
+    text-align: end;
+}
+
+.card{
+    background-color: white;
+    opacity: 1;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    width: 28%;
+    height: 30%;
+    border-radius: 5rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 2rem;
+    float: left;
+    box-sizing: border-box;
+}
+
+.card-img{
+    margin-top: 1rem;
+    width: 5rem;
+}
+
+.container {
+    width: 70%;
+}
+
+.product-img-main{
+    width: 30%;
+}
+
+section{
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.display-comentarios{
+    background-color: rgb(84, 84, 84);
+    width: 60%;    
+    min-height: 11rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    float: left;
+    text-align: center;
+}
+
+.comentario{
+    background-color: white;
+    opacity: 1;
+    width: 20%;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 1rem;
+    float: left;
+    box-sizing: border-box;
+    margin-left: 2rem;
+}
+
+.comentario > p{
+    color: black;
+}
+
+.sobre-nosotros{
+    opacity: 1;
+    width: 32%;
+    float: right;
+    padding: 2rem;
+    background-color: #B56C38;
+    color: white;
+    font: 0.8em sans-serif;
+    line-height: 1rem;
+}
+
+.sobre-nosotros > h4 {
+    font-size: medium;
+    margin-top: -0.1rem;
+}
+
+footer{
+    height: 3rem;
+    width: 100%;
+    background-color: #B56C38;
+    margin-top: 2rem;
+    text-align: center;
+    display: inline-block;
+    font: 1em sans-serif;
+    color: white;
+    vertical-align: middle;
+}
+
+.container-maquinas{
+    width: 100%;
+}
+
+.card-maquinas{
+    background-color: white;
+    opacity: 1;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    width: 20%;
+    border-radius: 3rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 2rem;
+    float: left;
+    box-sizing: border-box;
+}
+
+.container-capsulas{
+    width: 100%;
+
+}
+
+.card-capsulas{
+    background-color: gray;
+    opacity: 1;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    width: 20%;
+    border-radius: 3rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 2rem;
+    float: left;
+    box-sizing: border-box;
+}
+
+.btn{
+    width: 49%;
+}
+
+.cart-img{
+    width: 15%;
+    display: block;
+    float: right;
+    margin-top: -1rem;
+    margin-right: -1rem;
+}
+
+.container-cart{
+    width: 65%;
+    background-color: white;
+    border-radius: 3rem;
+
+}
+
+.card-cart{
+    background-color: gray;
+    opacity: 0.8;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    border-radius: 3rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 2rem;
+    float: left;
+    box-sizing: border-box;
+}
+
+h4{
+    text-align: left;
+    margin-top: -1rem;
+}
+
+.container-payment{
+    background-color: white;
+    opacity: 0.5;
+    width: 30%;
+    float: right;
+    border-radius: 2rem;
+    text-align: center;
+    margin-top: -20rem;
+}
+
+.recibo-content{
+    height: 30rem;
+}
+
+form {
+    max-width: 90%; /* Ajusta el ancho del formulario según tus necesidades */
+}
+
+.form-style{
+    background-color: white;
+    opacity: 0.5;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: inline-block;
+    width: 150px; /* Ajusta el ancho del label según tus necesidades */
+    margin-left: 1rem;
+    font-family: Arial, sans-serif; /* Cambia la fuente según tus preferencias */
+    padding: 10px;
+    text-align: center;
+}
+
+input {
+    display: inline-block;
+    width: 200px; /* Ajusta el ancho del input según tus necesidades */
+}
+
+.user-img{
+    width: 3rem;
+}
+
+.recommend-img{
+    width: 5rem;
+}
