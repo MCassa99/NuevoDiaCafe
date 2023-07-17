@@ -1,5 +1,5 @@
-html{
-    background: url("../assets/img/bgMainIMG.jpg") repeat-x center center fixed; 
+body{
+    background: url("../assets/img/bgMainIMG.jpg") repeat-x center center fixed;
     background-size: cover;
     opacity: 1;
     font-family: Arial, Helvetica, sans-serif;
@@ -47,7 +47,7 @@ a:hover {
     color: white;
 
     &::before {
-        background: whitesmoke;               
+        background: whitesmoke;
     }
 }
 
@@ -56,7 +56,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
 
-    ul {        
+    ul {
         display: flex;
         align-items: center;
     }
@@ -79,30 +79,6 @@ a:hover {
     text-align: end;
 }
 
-.card{
-    background-color: white;
-    opacity: 1;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-    width: 28%;
-    height: 30%;
-    border-radius: 5rem;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    text-align: center;
-    padding: 2rem;
-    float: left;
-    box-sizing: border-box;
-}
-
-.card-img{
-    margin-top: 1rem;
-    width: 5rem;
-}
-
-.container {
-    width: 70%;
-}
-
 .product-img-main{
     width: 30%;
 }
@@ -114,7 +90,7 @@ section{
 
 .display-comentarios{
     background-color: rgb(84, 84, 84);
-    width: 60%;    
+    width: 60%;
     min-height: 11rem;
     padding: 1rem;
     border-radius: 2rem;
@@ -155,33 +131,44 @@ section{
     margin-top: -0.1rem;
 }
 
-footer{
-    height: 3rem;
-    width: 100%;
-    background-color: #B56C38;
-    margin-top: 2rem;
-    text-align: center;
-    display: inline-block;
-    font: 1em sans-serif;
-    color: white;
-    vertical-align: middle;
+.container-maquinas{
+    display: grid;
+    margin: 0 auto;
+    max-width: 90%;
+    grid-gap: 1rem;
 }
 
-.container-maquinas{
-    width: 100%;
+@media (min-width: 0px){
+    .container-maquinas{grid-template-columns: repeat(1, 1fr);}
+    .card-img{ max-width: 6rem; }
+    .title{ font-size: medium; font-weight: bold; color: white;}
 }
+
+@media (min-width: 320px){
+    .container-maquinas{grid-template-columns: repeat(2, 1fr);}
+    .card-img{ max-width: 6rem; }
+    .title{ font-size: large; font-weight: bold; color: white;}
+}
+
+@media (min-width: 768px){
+    .container-maquinas{grid-template-columns: repeat(3, 1fr);}
+    .card-img{ max-width: 8rem; }
+    .title{ font-size: larger; font-weight: bold; color: white;}
+}
+
+@media (min-width: 1024px){
+    .container-maquinas{ grid-template-columns: repeat(4, 1fr); }
+    .card-img{ max-width: 12rem; }
+    .title{ font-size: x-large ; font-weight: bold; color: white;}
+}
+.descripcion{ font-size: small; color: white;}
+
 
 .card-maquinas{
-    background-color: white;
-    opacity: 1;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-    width: 20%;
     border-radius: 3rem;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     text-align: center;
-    padding: 2rem;
-    float: left;
+    padding: 1rem;
     box-sizing: border-box;
 }
 
@@ -202,10 +189,6 @@ footer{
     padding: 2rem;
     float: left;
     box-sizing: border-box;
-}
-
-.btn{
-    width: 49%;
 }
 
 .cart-img{

@@ -6,128 +6,143 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>Nuevo Amanecer</title>
 </head>
 
 <body>
-    <header>
-        <p><b>UN NUEVO INICIO PARA TUS MAÑANAS</b></p>
-        <!-- Navbar -->
-        <nav>
-            <div>
-                <div class="pagenav">
-                    <!-- Opciones de Navbar -->
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li>
-                            <a class="navimg" href="../index.html">
-                                <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" />
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/maquinas.html">MAQUINAS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/capsulas.html">CÁPSULAS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">FILTROS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">CAFÉ</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Perfil y Carrito -->
-                <div class="d-flex align-items-center">
-                    <!-- Carrito -->
-                    <a class="link-secondary m-2" href="./pages/carrito.html">
-                        <img src="./assets/img/cart.png" height="60">
-                    </a>
-                    <!-- Perfil -->
-
-                    <div class="dropdown">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
-                            data-bs-display="static" aria-expanded="false">
-                            <img src="./assets/img/user-icon-white.png" class="rounded-circle" height="25" />
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end">
-                            <img src="./assets/img/user-icon.png" class="m-1 rounded-circle" height="25" />
-                            Usuario
-                            <li>
-                                <hr class="dropdown-divider">
+    <div >
+        <header>
+            <p class="d-flex justify-content-center text-white p-1" style="background-color: #834F29;"><b>UN NUEVO
+                    INICIO PARA TUS MAÑANAS</b></p>
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark text-white sticky-top" style="background-color: black;">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- LOGO -->
+                        <a class="navbar-brand mt-2 mt-lg-0" href="../index.html">
+                            <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" />
+                        </a>
+                        <!-- Opciones de Navbar -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./maquinas.html">MAQUINAS</a>
                             </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Mi Cuenta</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./capsulas.html">CÁPSULAS</a>
                             </li>
-                            <li>
-                                <a class="dropdown-item" href="#"></a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">FILTROS</a>
                             </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">CAFÉ</a>
                             </li>
                         </ul>
                     </div>
+                    <!-- Perfil y Carrito -->
+                    <div class="d-flex align-items-center">
+                        <!-- Carrito -->
+                        <a class="link-secondary m-2" href="./carrito.html">
+                            <img src="../assets/img/cart.png" height="60">
+                        </a>
+                        <!-- Perfil -->
+
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                                data-bs-display="static" aria-expanded="false">
+                                <img src="../assets/img/user-icon-white.png" class="rounded-circle" height="25" />
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end">
+                                <img src="../assets/img/user-icon.png" class="m-1 rounded-circle" height="25" />
+                                Usuario
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Mi Cuenta</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"></a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <div class="container-maquinas">
-                <div class="card-maquinas">
-                    <img class="card-img" src="../assets/img/prod2.png" alt="Product">
-                    <h2>NOMBRE MAQUINA</h2>
-                    <p class="descripcion"> Esto es una descripcion generica para mi producto que luego se posicionara
-                        aqui!</p>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <div class="container-maquinas">
+                    <div class="card-maquinas bg-light bg-opacity-25">
+                        <img class="card-img " src="../assets/img/prod2.png" alt="Product">
+                        <p class="title">NOMBRE MAQUINA</p>
+                        <p class="descripcion"> Esto es una descripcion generica para mi producto que luego se
+                            posicionara
+                            aqui!</p>
+                    </div>
+                    <div class="card-maquinas bg-light bg-opacity-25">
+                        <img class="card-img" src="../assets/img/prod2.png" alt="Product">
+                        <p class="title">NOMBRE MAQUINA</p>
+                        <p class="descripcion"> Esto es una descripcion generica para mi producto que luego se
+                            posicionara
+                            aqui!</p>
+                    </div>
+                    <div class="card-maquinas bg-light bg-opacity-25">
+                        <img class="card-img" src="../assets/img/prod2.png" alt="Product">
+                        <p class="title">NOMBRE MAQUINA</p>
+                        <p class="descripcion"> Esto es una descripcion generica para mi producto que luego se
+                            posicionara
+                            aqui!</p>
+                    </div>
+                    <div class="card-maquinas bg-light bg-opacity-25">
+                        <img class="card-img" src="../assets/img/prod2.png" alt="Product">
+                        <p class="title">NOMBRE MAQUINA</p>
+                        <p class="descripcion"> Esto es una descripcion generica para mi producto que luego se
+                            posicionara
+                            aqui!</p>
+                    </div>
+                    <div class="card-maquinas bg-light bg-opacity-25">
+                        <img class="card-img" src="../assets/img/prod2.png" alt="Product">
+                        <p class="title">NOMBRE MAQUINA</p>
+                        <p class="descripcion"> Esto es una descripcion generica para mi producto que luego se
+                            posicionara
+                            aqui!</p>
+                    </div>
+                    <div class="card-maquinas bg-light bg-opacity-25">
+                        <img class="card-img" src="../assets/img/prod2.png" alt="Product">
+                        <p class="title">NOMBRE MAQUINA</p>
+                        <p class="descripcion"> Esto es una descripcion generica para mi producto que luego se
+                            posicionara
+                            aqui!</p>
+                    </div>
+                    <div class="card-maquinas bg-light bg-opacity-25">
+                        <img class="card-img" src="../assets/img/prod2.png" alt="Product">
+                        <p class="title">NOMBRE MAQUINA</p>
+                        <p class="descripcion"> Esto es una descripcion generica para mi producto que luego se
+                            posicionara
+                            aqui!</p>
+                    </div>
+                    <div class="card-maquinas bg-light bg-opacity-25">
+                        <img class="card-img" src="../assets/img/prod2.png" alt="Product">
+                        <p class="title">NOMBRE MAQUINA</p>
+                        <p class="descripcion"> Esto es una descripcion generica para mi producto que luego se
+                            posicionara
+                            aqui!</p>
+                    </div>
                 </div>
-                <div class="card-maquinas">
-                    <img class="card-img" src="../assets/img/prod2.png" alt="Product">
-                    <h2>NOMBRE MAQUINA</h2>
-                    <p class="descripcion"> Esto es una descripcion generica para mi producto que luego se posicionara
-                        aqui!</p>
-                </div>
-                <div class="card-maquinas">
-                    <img class="card-img" src="../assets/img/prod2.png" alt="Product">
-                    <h2>NOMBRE MAQUINA</h2>
-                    <p class="descripcion"> Esto es una descripcion generica para mi producto que luego se posicionara
-                        aqui!</p>
-                </div>
-                <div class="card-maquinas">
-                    <img class="card-img" src="../assets/img/prod2.png" alt="Product">
-                    <h2>NOMBRE MAQUINA</h2>
-                    <p class="descripcion"> Esto es una descripcion generica para mi producto que luego se posicionara
-                        aqui!</p>
-                </div>
-                <div class="card-maquinas">
-                    <img class="card-img" src="../assets/img/prod2.png" alt="Product">
-                    <h2>NOMBRE MAQUINA</h2>
-                    <p class="descripcion"> Esto es una descripcion generica para mi producto que luego se posicionara
-                        aqui!</p>
-                </div>
-                <div class="card-maquinas">
-                    <img class="card-img" src="../assets/img/prod2.png" alt="Product">
-                    <h2>NOMBRE MAQUINA</h2>
-                    <p class="descripcion"> Esto es una descripcion generica para mi producto que luego se posicionara
-                        aqui!</p>
-                </div>
-                <div class="card-maquinas">
-                    <img class="card-img" src="../assets/img/prod2.png" alt="Product">
-                    <h2>NOMBRE MAQUINA</h2>
-                    <p class="descripcion"> Esto es una descripcion generica para mi producto que luego se posicionara
-                        aqui!</p>
-                </div>
-                <div class="card-maquinas">
-                    <img class="card-img" src="../assets/img/prod2.png" alt="Product">
-                    <h2>NOMBRE MAQUINA</h2>
-                    <p class="descripcion"> Esto es una descripcion generica para mi producto que luego se posicionara
-                        aqui!</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <a href="../pages/servicioTecnico.html">SERVICIO TÉCNICO - SOBRE NOSOTROS</a>
-    </footer>
+            </section>
+        </main>
+        <footer class="mt-4">
+            <a class="text-center text-white d-block fs-5" style="background-color: #834F29; text-decoration: none;" href="./servicioTecnico.html">SERVICIO TÉCNICO - SOBRE NOSOTROS</a>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+    </div>
 </body>
 
 </html>
