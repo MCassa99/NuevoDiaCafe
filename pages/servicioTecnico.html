@@ -1,55 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>Nuevo Amanecer</title>
 </head>
+
 <body>
-    <header>
-        <p><b>UN NUEVO INICIO PARA TUS MAÑANAS</b></p>
-        <nav>
-            <ul>
-                <div class="nav-bar">
-                    <a href="../pages/maquinas.html">MAQUINAS</a>
-                    <a href="../pages/capsulas.html">CÁPSULAS</a>
-                    <a href="">FILTROS</a>
-                    <a href="">CAFÉ</a>
+    <div class="bg-image" style="background: url('./assets/img/bgMainIMG.jpg') repeat-x center center fixed; background-size: cover; 
+            overflow-x: hidden;">
+        <header>
+            <p><b>UN NUEVO INICIO PARA TUS MAÑANAS</b></p>
+            <nav class="navbar navbar-expand navbar-dark">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- LOGO -->
+                        <a class="navbar-brand mt-2 mt-lg-0" href="../index.html">
+                            <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" />
+                        </a>
+                        <!-- Opciones de Navbar -->
+                        <ul class="navbar-nav me-auto mb-2 mb-0">
+                            <li class="nav-item d-lg-block d-xl-block d-none">
+                                <a class="nav-link" href="./maquinas.html">MAQUINAS</a>
+                            </li>
+                            <li class="nav-item d-lg-block d-xl-block d-none">
+                                <a class="nav-link" href="./capsulas.html">CÁPSULAS</a>
+                            </li>
+                            <li class="nav-item d-lg-block d-xl-block d-none">
+                                <a class="nav-link" href="#">FILTROS</a>
+                            </li>
+                            <li class="nav-item d-lg-block d-xl-block d-none">
+                                <a class="nav-link" href="#">CAFÉ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Perfil y Carrito -->
+                    <div class="d-flex align-items-center">
+                        <!-- Carrito -->
+                        <a class="link-secondary m-2 d-lg-block d-xl-block d-none" href="./carrito.html">
+                            <img src="../assets/img/cart.png" height="60">
+                        </a>
+                        <!-- Perfil -->
+
+                        <div class="dropdown">
+                            <button type="button"
+                                class="btn btn-secondary dropdown-toggle  d-lg-block d-xl-block d-none"
+                                data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                <img src="../assets/img/user-icon-white.png" class="rounded-circle" height="25" />
+                            </button>
+                            <button type="button" class="btn btn-secondary dropdown-toggle d-lg-none d-xl-none"
+                                data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                <img src="../assets/img/menu-icon.png" class="rounded-circle" height="25" />
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-end">
+                                <img src="../assets/img/user-icon.png" class="m-1 rounded-circle" height="25" />
+                                Usuario
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li class="d-lg-block d-xl-block d-none">
+                                    <a class="dropdown-item" href="#">Mi Cuenta</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"></a>
+                                </li>
+                                <li class="d-lg-block d-xl-block d-none">
+                                    <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                                </li>
+                                <li class=" d-lg-none d-xl-none">
+                                    <a class="dropdown-item" href="./maquinas.html">MAQUINAS</a>
+                                </li>
+                                <li class=" d-lg-none d-xl-none">
+                                    <a class="dropdown-item" href="./capsulas.html">CÁPSULAS</a>
+                                </li>
+                                <li class=" d-lg-none d-xl-none">
+                                    <a class="dropdown-item" href="#">FILTROS</a>
+                                </li>
+                                <li class=" d-lg-none d-xl-none">
+                                    <a class="dropdown-item" href="#">CAFÉ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="user-menu">
-                    <a class="user" href=""><img src="../assets/img/user-icon-white.png">LOGIN</a> 
-                </div>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <form action="">
-                <div class="form-style">
-                    <label for="name">Nombre: </label>
-                    <input type="text" name="name">
-                </div>
-                <div class="form-style">
-                    <label for="email">Email: </label>
-                    <input type="email" name="email">
-                </div>
-                <div class="form-style">
-                    <label for="cel">Telefono de Contacto: </label>
-                    <input type="text" name="cel">
-                </div>
-                <div class="form-style">
-                    <label for="descripcion">Descripcion: </label>
-                    <textarea name="descripcion" cols="30" rows="10"></textarea>
-                </div>
-                <div class="form-style">
-                    <button>ENVIAR</button>
-                </div>
-            </form>
-        </section>
-    </main>
-    <footer>
-    </footer>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <form class="col-lg-6">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                            <input type="text" class="form-control" placeholder="Nombre">
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                            <input type="text" class="form-control" placeholder="Apellido">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="E-Mail de Contacto">
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" class="form-control" id="telefono" placeholder="Teléfono">
+                    </div>
+                    <div class="form-group mb-3">                        
+                        <textarea class="form-control" id="comment" rows="5" placeholder="Comentario"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">ENVIAR</button>
+                </form>
+            </section>
+        </main>
+        <footer class="mt-4">
+            <a class="text-center text-white d-block fs-5" style="background-color: #834F29; text-decoration: none;"
+                href="../pages/servicioTecnico.html">SERVICIO TÉCNICO - SOBRE NOSOTROS</a>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

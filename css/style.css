@@ -1,11 +1,14 @@
-body{
+body {
     background: url("../assets/img/bgMainIMG.jpg") repeat-x center center fixed;
     background-size: cover;
     opacity: 1;
     font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 5rem;
+    position: relative;
+    min-height: 100vh;
 }
 
-header > p{
+header>p {
     display: flex;
     justify-content: center;
     color: white;
@@ -13,7 +16,7 @@ header > p{
     background-color: #B56C38;
 }
 
-.cart{
+.cart {
     margin-left: auto;
 }
 
@@ -21,18 +24,18 @@ header > p{
     margin-left: auto;
 }
 
-.cart img{
+.cart img {
     width: 3rem;
 }
 
-.user img{
+.user img {
     width: 3rem;
 }
 
 nav {
     padding: 10px;
 
-    @media (min-width: 600px){
+    @media (min-width: 600px) {
         padding: 20px;
     }
 }
@@ -75,20 +78,20 @@ a:hover {
     list-style-type: none;
 }
 
-.user-menu{
+.user-menu {
     text-align: end;
 }
 
-.product-img-main{
+.product-img-main {
     width: 30%;
 }
 
-section{
+section {
     margin-top: 2rem;
     margin-left: 2rem;
 }
 
-.display-comentarios{
+.display-comentarios {
     background-color: rgb(84, 84, 84);
     width: 60%;
     min-height: 11rem;
@@ -98,12 +101,12 @@ section{
     text-align: center;
 }
 
-.comentario{
+.comentario {
     background-color: white;
     opacity: 1;
     width: 20%;
     border-radius: 2rem;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
     padding: 1rem;
     float: left;
@@ -111,11 +114,11 @@ section{
     margin-left: 2rem;
 }
 
-.comentario > p{
+.comentario>p {
     color: black;
 }
 
-.sobre-nosotros{
+.sobre-nosotros {
     opacity: 1;
     width: 32%;
     float: right;
@@ -126,72 +129,97 @@ section{
     line-height: 1rem;
 }
 
-.sobre-nosotros > h4 {
+.sobre-nosotros>h4 {
     font-size: medium;
     margin-top: -0.1rem;
 }
 
-.container-maquinas{
+.container-grids {
     display: grid;
     margin: 0 auto;
     max-width: 90%;
     grid-gap: 1rem;
 }
 
-@media (min-width: 0px){
-    .container-maquinas{grid-template-columns: repeat(1, 1fr);}
-    .card-img{ max-width: 6rem; }
-    .title{ font-size: medium; font-weight: bold; color: white;}
+@media (min-width: 0px) {
+    .container-grids {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-img {
+        max-width: 6rem;
+    }
+
+    .title {
+        font-size: medium;
+        font-weight: bold;
+        color: white;
+    }
 }
 
-@media (min-width: 320px){
-    .container-maquinas{grid-template-columns: repeat(2, 1fr);}
-    .card-img{ max-width: 6rem; }
-    .title{ font-size: large; font-weight: bold; color: white;}
+@media (min-width: 320px) {
+    .container-grids {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-img {
+        max-width: 6rem;
+    }
+
+    .title {
+        font-size: large;
+        font-weight: bold;
+        color: white;
+    }
 }
 
-@media (min-width: 768px){
-    .container-maquinas{grid-template-columns: repeat(3, 1fr);}
-    .card-img{ max-width: 8rem; }
-    .title{ font-size: larger; font-weight: bold; color: white;}
+@media (min-width: 768px) {
+    .container-grids {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-img {
+        max-width: 8rem;
+    }
+
+    .title {
+        font-size: larger;
+        font-weight: bold;
+        color: white;
+    }
 }
 
-@media (min-width: 1024px){
-    .container-maquinas{ grid-template-columns: repeat(4, 1fr); }
-    .card-img{ max-width: 12rem; }
-    .title{ font-size: x-large ; font-weight: bold; color: white;}
+@media (min-width: 1024px) {
+    .container-grids {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card-img {
+        max-width: 12rem;
+    }
+
+    .title {
+        font-size: x-large;
+        font-weight: bold;
+        color: white;
+    }
 }
-.descripcion{ font-size: small; color: white;}
+
+.descripcion {
+    font-size: small;
+    color: white;
+}
 
 
-.card-maquinas{
+.card-grids {
     border-radius: 3rem;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
     padding: 1rem;
     box-sizing: border-box;
 }
 
-.container-capsulas{
-    width: 100%;
-
-}
-
-.card-capsulas{
-    background-color: gray;
-    opacity: 1;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-    width: 20%;
-    border-radius: 3rem;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    text-align: center;
-    padding: 2rem;
-    float: left;
-    box-sizing: border-box;
-}
-
-.cart-img{
+.cart-img {
     width: 15%;
     display: block;
     float: right;
@@ -199,32 +227,32 @@ section{
     margin-right: -1rem;
 }
 
-.container-cart{
+.container-cart {
     width: 65%;
     background-color: white;
     border-radius: 3rem;
 
 }
 
-.card-cart{
+.card-cart {
     background-color: gray;
     opacity: 0.8;
     margin-right: 2rem;
     margin-bottom: 2rem;
     width: 100%;
     border-radius: 3rem;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 2rem;
     float: left;
     box-sizing: border-box;
 }
 
-h4{
+h4 {
     text-align: left;
     margin-top: -1rem;
 }
 
-.container-payment{
+.container-payment {
     background-color: white;
     opacity: 0.5;
     width: 30%;
@@ -234,15 +262,16 @@ h4{
     margin-top: -20rem;
 }
 
-.recibo-content{
+.recibo-content {
     height: 30rem;
 }
 
 form {
-    max-width: 90%; /* Ajusta el ancho del formulario según tus necesidades */
+    max-width: 90%;
+    /* Ajusta el ancho del formulario según tus necesidades */
 }
 
-.form-style{
+.form-style {
     background-color: white;
     opacity: 0.5;
     border-radius: 2rem;
@@ -251,22 +280,43 @@ form {
 
 label {
     display: inline-block;
-    width: 150px; /* Ajusta el ancho del label según tus necesidades */
+    width: 150px;
+    /* Ajusta el ancho del label según tus necesidades */
     margin-left: 1rem;
-    font-family: Arial, sans-serif; /* Cambia la fuente según tus preferencias */
+    font-family: Arial, sans-serif;
+    /* Cambia la fuente según tus preferencias */
     padding: 10px;
     text-align: center;
 }
 
 input {
     display: inline-block;
-    width: 200px; /* Ajusta el ancho del input según tus necesidades */
+    width: 200px;
+    /* Ajusta el ancho del input según tus necesidades */
 }
 
-.user-img{
+.user-img {
     width: 3rem;
 }
 
-.recommend-img{
+.recommend-img {
     width: 5rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.title{
+    margin-bottom: 5vh;
+}
+
+svg{
+    color: black;
+}
+
+svg:hover {
+    color: red;
 }

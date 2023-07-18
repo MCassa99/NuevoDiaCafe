@@ -18,25 +18,25 @@
             <p class="d-flex justify-content-center text-white p-1" style="background-color: #834F29;"><b>UN NUEVO
                     INICIO PARA TUS MAÑANAS</b></p>
             <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-dark">
+            <nav class="navbar navbar-expand navbar-dark">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- LOGO -->
-                        <a class="navbar-brand mt-2 mt-lg-0" href="./index.html         ">
+                        <a class="navbar-brand mt-2 mt-lg-0" href="./index.html">
                             <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" />
                         </a>
                         <!-- Opciones de Navbar -->
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
+                        <ul class="navbar-nav me-auto mb-2 mb-0">
+                            <li class="nav-item d-lg-block d-xl-block d-none">
                                 <a class="nav-link" href="./pages/maquinas.html">MAQUINAS</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item d-lg-block d-xl-block d-none">
                                 <a class="nav-link" href="./pages/capsulas.html">CÁPSULAS</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item d-lg-block d-xl-block d-none">
                                 <a class="nav-link" href="#">FILTROS</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item d-lg-block d-xl-block d-none">
                                 <a class="nav-link" href="#">CAFÉ</a>
                             </li>
                         </ul>
@@ -44,30 +44,47 @@
                     <!-- Perfil y Carrito -->
                     <div class="d-flex align-items-center">
                         <!-- Carrito -->
-                        <a class="link-secondary m-2" href="./pages/carrito.html">
+                        <a class="link-secondary m-2 d-lg-block d-xl-block d-none" href="./pages/carrito.html">
                             <img src="./assets/img/cart.png" height="60">
                         </a>
                         <!-- Perfil -->
 
                         <div class="dropdown">
-                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
-                                data-bs-display="static" aria-expanded="false">
+                            <button type="button"
+                                class="btn btn-secondary dropdown-toggle  d-lg-block d-xl-block d-none"
+                                data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                                 <img src="./assets/img/user-icon-white.png" class="rounded-circle" height="25" />
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end">
+                            <button type="button" class="btn btn-secondary dropdown-toggle d-lg-none d-xl-none"
+                                data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                <img src="./assets/img/menu-icon.png" class="rounded-circle" height="25" />
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-end">
                                 <img src="./assets/img/user-icon.png" class="m-1 rounded-circle" height="25" />
                                 Usuario
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li>
+                                <li class="d-lg-block d-xl-block d-none">
                                     <a class="dropdown-item" href="#">Mi Cuenta</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="#"></a>
                                 </li>
-                                <li>
+                                <li class="d-lg-block d-xl-block d-none">
                                     <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                                </li>
+                                <li class=" d-lg-none d-xl-none">
+                                    <a class="dropdown-item" href="./pages/maquinas.html">MAQUINAS</a>
+                                </li>
+                                <li class=" d-lg-none d-xl-none">
+                                    <a class="dropdown-item" href="./pages/capsulas.html">CÁPSULAS</a>
+                                </li>
+                                <li class=" d-lg-none d-xl-none">
+                                    <a class="dropdown-item" href="#">FILTROS</a>
+                                </li>
+                                <li class=" d-lg-none d-xl-none">
+                                    <a class="dropdown-item" href="#">CAFÉ</a>
                                 </li>
                             </ul>
                         </div>
@@ -283,7 +300,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 bg-opacity-50 d-none d-lg-block" 
+                    <div class="col-lg-3 bg-opacity-50 d-none d-lg-block"
                         style="background-color: #834F29; border-radius: 1rem;">
                         <p class="h4 text-center mt-2">Sobre Nosotros</p>
                         <p class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
@@ -295,7 +312,7 @@
                             senectus et netus et malesuada fames ac turpis egestas.
                         </p>
                     </div>
-                    <div class="col-lg-3 bg-opacity-50 d-md-none d-lg-none mt-4" 
+                    <div class="col-lg-3 bg-opacity-50 d-md-none d-lg-none mt-4"
                         style="background-color: #834F29; border-radius: 1rem;">
                         <p class="h4 text-center mt-2">Sobre Nosotros</p>
                         <p class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum a
@@ -311,7 +328,8 @@
             </div>
         </main>
         <footer class="mt-4">
-            <a class="text-center text-white d-block fs-5" style="background-color: #834F29; text-decoration: none;" href="../pages/servicioTecnico.html">SERVICIO TÉCNICO - SOBRE NOSOTROS</a>
+            <a class="text-center text-white d-block lead" style="background-color: #834F29; text-decoration: none;"
+                href="../pages/servicioTecnico.html">SERVICIO TÉCNICO - SOBRE NOSOTROS</a>
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
