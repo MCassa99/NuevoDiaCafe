@@ -33,7 +33,9 @@ nav {
 a {
   position: relative;
   text-decoration: none;
-  color: grey; }
+  color: gray; }
+  a:hover {
+    color: white; }
 
 .pagenav {
   display: flex;
@@ -48,11 +50,6 @@ a {
 .nav-bar {
   justify-content: space-between;
   list-style-type: none; }
-
-a:hover {
-  color: white; }
-  a:hover::before {
-    background: whitesmoke; }
 
 .user-menu {
   text-align: end; }
@@ -112,24 +109,12 @@ section {
   font-size: small;
   color: white; }
 
-.card-grids {
-  border-radius: 3rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  text-align: center;
-  padding: 1rem;
-  box-sizing: border-box; }
-
 .cart-img {
   width: 15%;
   display: block;
   float: right;
   margin-top: -1rem;
   margin-right: -1rem; }
-
-.container-cart {
-  width: 65%;
-  background-color: white;
-  border-radius: 3rem; }
 
 .card-cart {
   background-color: gray;
@@ -194,47 +179,18 @@ footer {
 .title {
   margin-bottom: 5vh; }
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 5rem; }
+  .card .card-title {
+    color: white; }
+  .card .card-body {
+    color: gainsboro;
+    text-shadow: 1px 1px 2px black; }
+
 svg {
   color: black; }
   svg:hover {
     color: red; }
-
-@media (min-width: 0px) {
-  .container-grids {
-    grid-template-columns: repeat(1, 1fr); }
-  .card-img {
-    max-width: 6rem; }
-  .title {
-    font-size: medium;
-    font-weight: bold;
-    color: white; } }
-
-@media (min-width: 320px) {
-  .container-grids {
-    grid-template-columns: repeat(2, 1fr); }
-  .card-img {
-    max-width: 6rem; }
-  .title {
-    font-size: large;
-    font-weight: bold;
-    color: white; } }
-
-@media (min-width: 768px) {
-  .container-grids {
-    grid-template-columns: repeat(3, 1fr); }
-  .card-img {
-    max-width: 8rem; }
-  .title {
-    font-size: larger;
-    font-weight: bold;
-    color: white; } }
-
-@media (min-width: 1024px) {
-  .container-grids {
-    grid-template-columns: repeat(4, 1fr); }
-  .card-img {
-    max-width: 12rem; }
-  .title {
-    font-size: x-large;
-    font-weight: bold;
-    color: white; } }

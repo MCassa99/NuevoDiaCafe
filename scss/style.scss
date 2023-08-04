@@ -1,7 +1,8 @@
 $color_1: white;
-$color_2: grey;
+$color_2: gray;
 $color_3: black;
 $color_4: red;
+$color_5: rgb(220, 220, 220);
 $font-family_1: Arial, Helvetica, sans-serif;
 $font-family_2: Arial, sans-serif;
 $background-color_1: #B56C38;
@@ -57,6 +58,9 @@ a {
     position: relative;
     text-decoration: none;
     color: $color_2;
+    &:hover {
+        color: $color_1;
+    }
 }
 
 .pagenav {
@@ -77,16 +81,6 @@ a {
 .nav-bar {
     justify-content: space-between;
     list-style-type: none;
-}
-
-a {
-    &:hover {
-        color: $color_1;
-
-        &::before {
-            background: whitesmoke;
-        }
-    }
 }
 
 .user-menu {
@@ -150,6 +144,7 @@ section {
     margin: 0 auto;
     max-width: 90%;
     grid-gap: 1rem;
+
     h2 {
         color: $color_3;
     }
@@ -160,26 +155,12 @@ section {
     color: $color_1;
 }
 
-.card-grids {
-    border-radius: 3rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    text-align: center;
-    padding: 1rem;
-    box-sizing: border-box;
-}
-
 .cart-img {
     width: 15%;
     display: block;
     float: right;
     margin-top: -1rem;
     margin-right: -1rem;
-}
-
-.container-cart {
-    width: 65%;
-    background-color: $background-color_3;
-    border-radius: 3rem;
 }
 
 .card-cart {
@@ -257,74 +238,24 @@ footer {
     margin-bottom: 5vh;
 }
 
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 5rem;
+    .card-title{
+        color: $color_1;
+    }
+    .card-body{
+        color: $color_5;
+        text-shadow: 1px 1px 2px black;
+    }
+}
+
 svg {
     color: $color_3;
 
     &:hover {
         color: $color_4;
-    }
-}
-
-@media (min-width: 0px) {
-    .container-grids {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .card-img {
-        max-width: 6rem;
-    }
-
-    .title {
-        font-size: medium;
-        font-weight: bold;
-        color: $color_1;
-    }
-}
-
-@media (min-width: 320px) {
-    .container-grids {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .card-img {
-        max-width: 6rem;
-    }
-
-    .title {
-        font-size: large;
-        font-weight: bold;
-        color: $color_1;
-    }
-}
-
-@media (min-width: 768px) {
-    .container-grids {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .card-img {
-        max-width: 8rem;
-    }
-
-    .title {
-        font-size: larger;
-        font-weight: bold;
-        color: $color_1;
-    }
-}
-
-@media (min-width: 1024px) {
-    .container-grids {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .card-img {
-        max-width: 12rem;
-    }
-
-    .title {
-        font-size: x-large;
-        font-weight: bold;
-        color: $color_1;
     }
 }
