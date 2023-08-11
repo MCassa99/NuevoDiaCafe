@@ -12,7 +12,7 @@ $colors: (
 $background-colors: (
             bg1 : #B56C38,
             bg2 : rgb(84, 84, 84),
-            bg3 : white,
+            bg3 :  #834F29,
             bg4 : gray,
 );
 
@@ -65,7 +65,11 @@ a {
 }
 
 form {
-    max-width: 90%;
+    @include center(100%);
+    padding: 2rem;
+    .btn{
+        @include center(100%);
+    }
 }
 
 footer {
@@ -92,6 +96,16 @@ footer {
     .card-body{
         @include cardtext()
     }
+}
+
+.aboutuslg{
+    background-color: background-colors(bg3);
+    margin-left: 4rem;
+}
+
+.aboutusxl{
+    @extend .aboutuslg;
+    margin-left: 4rem;
 }
 
 .card-capsulas {

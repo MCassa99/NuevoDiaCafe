@@ -22,7 +22,16 @@ a {
     color: white; }
 
 form {
-  max-width: 90%; }
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 2rem; }
+  form .btn {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; }
 
 footer {
   position: absolute;
@@ -48,6 +57,13 @@ footer {
   .card-maquinas .card-body, .card-capsulas .card-body {
     color: gainsboro;
     text-shadow: 1px 1px 2px black; }
+
+.aboutuslg, .aboutusxl {
+  background-color: #834F29;
+  margin-left: 4rem; }
+
+.aboutusxl {
+  margin-left: 4rem; }
 
 .card-capsulas {
   padding-top: 1rem; }
