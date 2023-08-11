@@ -1,8 +1,8 @@
 $colors: (
-            1 : white,
-            2 : gray, 
-            3 : black, 
-            4 : rgb(220, 220, 220)
+    1 : white,
+    2 : gray,
+    3 : black,
+    4 : rgb(220, 220, 220)
 );
 
 @function color($search) {
@@ -10,10 +10,10 @@ $colors: (
 }
 
 $background-colors: (
-            bg1 : #B56C38,
-            bg2 : rgb(84, 84, 84),
-            bg3 :  #834F29,
-            bg4 : gray,
+    bg1 : #B56C38,
+    bg2 : rgb(84, 84, 84),
+    bg3 : #834F29,
+    bg4 : gray,
 );
 
 @function background-colors($search) {
@@ -43,12 +43,12 @@ header {
     }
 }
 
-@mixin cardtext(){
+@mixin cardtext() {
     color: color(4);
     text-shadow: 1px 1px 2px black;
 }
 
-@mixin center($width){
+@mixin center($width) {
     width: $width;
     margin-left: auto;
     margin-right: auto;
@@ -59,6 +59,7 @@ a {
     position: relative;
     text-decoration: none;
     color: color(2);
+
     &:hover {
         color: color(1);
     }
@@ -66,8 +67,8 @@ a {
 
 form {
     @include center(100%);
-    padding: 2rem;
-    .btn{
+
+    .btn {
         @include center(100%);
     }
 }
@@ -87,31 +88,61 @@ footer {
     text-align: center;
     box-sizing: border-box;
     border-radius: 5rem;
+
     .card-img-top {
         @include center(75%);
     }
-    .card-title{
+
+    .card-title {
         @include cardtext()
     }
-    .card-body{
+
+    .card-body {
         @include cardtext()
     }
 }
 
-.aboutuslg{
+.aboutuslg {
     background-color: background-colors(bg3);
     margin-left: 4rem;
 }
 
-.aboutusxl{
+.aboutusxl {
     @extend .aboutuslg;
     margin-left: 4rem;
 }
 
 .card-capsulas {
     padding-top: 1rem;
+
     .card-img-top {
         @include center(60%);
     }
+
     @extend .card-maquinas;
+}
+
+$ccard-height: 3rem;
+
+.ccard {
+    max-height: $ccard-height;
+    margin-right: 1rem;
+
+    @media (max-width: 576px) {
+        max-height: 2rem;
+    }
+
+    @media (min-width: 577px) and (max-width: 992px) {
+        max-height: 2.5rem;
+    }
+
+    @media (min-width: 993px) and (max-width: 1200px) {
+        max-height: 3rem;
+    }
+}
+
+.xs-clear{
+    @media (max-width: 385px) {
+        display: none;
+    }
 }
