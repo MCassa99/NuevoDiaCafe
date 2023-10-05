@@ -20,269 +20,96 @@
 </head>
 
 <body>
-    <div class="bg-image" style="background: url('./assets/img/bgMainIMG.webp') repeat-x center center fixed; background-size: cover; 
-            overflow-x: hidden;">
-        <header>
-            <p><b>UN NUEVO INICIO PARA TUS MAÑANAS</b></p>
-            <nav class="navbar navbar-expand navbar-dark">
-                <div class="container-fluid">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- LOGO -->
-                        <a class="navbar-brand mt-2 mt-lg-0 ml-4" href="../index.html">
-                            <img src="../assets/img/logo.png" height="80" />
-                        </a>
-                        <!-- Opciones de Navbar -->
-                        <ul class="navbar-nav me-auto mb-2 mb-0">
-                            <li class="nav-item d-lg-block d-xl-block d-none">
-                                <a class="nav-link" href="./maquinas.html">MAQUINAS</a>
+    <header>
+        <p><b>UN NUEVO INICIO PARA TUS MAÑANAS</b></p>
+        <nav class="navbar navbar-expand navbar-dark">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- LOGO -->
+                    <a class="navbar-brand mt-2 mt-lg-0 ml-4" href="../index.html">
+                        <img src="../assets/img/logo.png" height="80" />
+                    </a>
+                    <!-- Opciones de Navbar -->
+                    <ul class="navbar-nav me-auto mb-2 mb-0">
+                        <li class="nav-item d-lg-block d-xl-block d-none">
+                            <a class="nav-link" href="./maquinas.html">MAQUINAS</a>
+                        </li>
+                        <li class="nav-item d-lg-block d-xl-block d-none">
+                            <a class="nav-link" href="#">FILTROS</a>
+                        </li>
+                        <li class="nav-item d-lg-block d-xl-block d-none">
+                            <a class="nav-link" href="#">CAFÉ</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Perfil y Carrito -->
+                <div class="d-flex align-items-center">
+                    <!-- Carrito -->
+                    <a class="link-secondary m-2 d-lg-block d-xl-block d-none" href="./carrito.html">
+                        <img src="../assets/img/cart.png" height="60">
+                    </a>
+                    <!-- Perfil -->
+
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-secondary dropdown-toggle  d-lg-block d-xl-block d-none"
+                            data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            <img src="../assets/img/user-icon-white.png" class="rounded-circle" height="25" />
+                        </button>
+                        <button type="button" class="btn btn-secondary dropdown-toggle d-lg-none d-xl-none"
+                            data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            <img src="../assets/img/menu-icon.png" class="rounded-circle" height="25" />
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-end">
+                            <img src="../assets/img/user-icon.png" class="m-1 rounded-circle" height="25" />
+                            Usuario
+                            <li class="d-lg-none d-xl-none">
+                                <a class="dropdown-item" href="./carrito.html">Carrito</a>
+                                </a>
                             </li>
-                            <li class="nav-item d-lg-block d-xl-block d-none">
-                                <a class="nav-link" href="#">FILTROS</a>
+                            <li>
+                                <hr class="dropdown-divider">
                             </li>
-                            <li class="nav-item d-lg-block d-xl-block d-none">
-                                <a class="nav-link" href="#">CAFÉ</a>
+                            <li class="d-lg-block d-xl-block d-none">
+                                <a class="dropdown-item" href="#">Mi Cuenta</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"></a>
+                            </li>
+                            <li class="d-lg-block d-xl-block d-none">
+                                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                            </li>
+
+                            <li class=" d-lg-none d-xl-none">
+                                <a class="dropdown-item" href="./maquinas.html">MAQUINAS</a>
+                            </li>
+                            <li class=" d-lg-none d-xl-none">
+                                <a class="dropdown-item" href="#">FILTROS</a>
+                            </li>
+                            <li class=" d-lg-none d-xl-none">
+                                <a class="dropdown-item" href="#">CAFÉ</a>
                             </li>
                         </ul>
                     </div>
-                    <!-- Perfil y Carrito -->
-                    <div class="d-flex align-items-center">
-                        <!-- Carrito -->
-                        <a class="link-secondary m-2 d-lg-block d-xl-block d-none" href="./carrito.html">
-                            <img src="../assets/img/cart.png" height="60">
-                        </a>
-                        <!-- Perfil -->
-
-                        <div class="dropdown">
-                            <button type="button"
-                                class="btn btn-secondary dropdown-toggle  d-lg-block d-xl-block d-none"
-                                data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                                <img src="../assets/img/user-icon-white.png" class="rounded-circle" height="25" />
-                            </button>
-                            <button type="button" class="btn btn-secondary dropdown-toggle d-lg-none d-xl-none"
-                                data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                                <img src="../assets/img/menu-icon.png" class="rounded-circle" height="25" />
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-end">
-                                <img src="../assets/img/user-icon.png" class="m-1 rounded-circle" height="25" />
-                                Usuario
-                                <li class="d-lg-none d-xl-none">
-                                    <a class="dropdown-item" href="./carrito.html">Carrito</a>
-                                    </a>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li class="d-lg-block d-xl-block d-none">
-                                    <a class="dropdown-item" href="#">Mi Cuenta</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"></a>
-                                </li>
-                                <li class="d-lg-block d-xl-block d-none">
-                                    <a class="dropdown-item" href="#">Cerrar Sesión</a>
-                                </li>
-
-                                <li class=" d-lg-none d-xl-none">
-                                    <a class="dropdown-item" href="./maquinas.html">MAQUINAS</a>
-                                </li>
-                                <li class=" d-lg-none d-xl-none">
-                                    <a class="dropdown-item" href="#">FILTROS</a>
-                                </li>
-                                <li class=" d-lg-none d-xl-none">
-                                    <a class="dropdown-item" href="#">CAFÉ</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <div class="mt-2">
-                <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1 g-4 p-5">
-                    <!-- Espresso Intenso -->
-                    <div class="col">
-                        <div class="card card-capsulas h-100 bg-light bg-opacity-25">
-                            <img src="../assets/img/capsulas/Espresso Intenso.png" class="card-img-top mt-2"
-                                alt="Espresso Intenso" />
-                            <div class="card-body">
-                                <h5 class="card-title">Espresso Intenso</h5>
-                                <p class="card-text">
-                                    Elaborado con granos de café de tueste oscuro, este espresso ofrece un sabor robusto
-                                    con notas a chocolate amargo
-                                    y un final suave y duradero. Ideal para aquellos que buscan una experiencia de café
-                                    potente y satisfactoria.
-                                </p>
-                            </div>
-                            <div class="card-body">
-                                <div class="d-flex flex-column align-items-center">
-                                    <button class="btn btn-danger col-12 text-center mb-1">COMPRAR</button>
-                                    <button class="btn btn-primary col-12 text-center mb-1">AGREGAR AL CARRITO</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Cappuccino Caramelo -->
-                    <div class="col">
-                        <div class="card card-capsulas h-100 bg-light bg-opacity-25">
-                            <img src="../assets/img/capsulas/Cappuccino Caramelo.png" class="card-img-top mt-2"
-                                alt="Cappuccino Caramelo" />
-                            <div class="card-body">
-                                <h5 class="card-title">Cappuccino Caramelo</h5>
-                                <p class="card-text">Esta cápsula combina un espresso suave y cremoso con una deliciosa
-                                    espuma de leche
-                                    y un toque de caramelo. Perfecto para quienes disfrutan de una bebida con equilibrio
-                                    entre lo dulce y lo amargo.
-                                </p>
-                            </div>
-                            <div class="card-body">
-                                <div class="d-flex flex-column align-items-center">
-                                    <button class="btn btn-danger col-12 text-center mb-1">COMPRAR</button>
-                                    <button class="btn btn-primary col-12 text-center mb-1">AGREGAR AL CARRITO</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Mocha Almendra -->
-                    <div class="col">
-                        <div class="card card-capsulas h-100 bg-light bg-opacity-25">
-                            <img src="../assets/img/capsulas/Mocha Almendra.png" class="card-img-top mt-2"
-                                alt="Mocha Almendra" />
-                            <div class="card-body">
-                                <h5 class="card-title">Mocha Almendra</h5>
-                                <p class="card-text">Una tentadora fusión de sabores.
-                                    Esta cápsula ofrece un espresso rico y aromático combinado
-                                    con chocolate oscuro y leche cremosa, todo realzado con el toque distintivo de
-                                    almendras
-                                    tostadas.
-                                </p>
-                            </div>
-                            <div class="card-body">
-                                <div class="d-flex flex-column align-items-center">
-                                    <button class="btn btn-danger col-12 text-center mb-1">COMPRAR</button>
-                                    <button class="btn btn-primary col-12 text-center mb-1">AGREGAR AL CARRITO</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Vanilla Latte -->
-                    <div class="col">
-                        <div class="card card-capsulas h-100 bg-light bg-opacity-25">
-                            <img src="../assets/img/capsulas/Vanilla Latte.png" class="card-img-top mt-2" alt="Vanilla Latte" />
-                            <div class="card-body">
-                                <h5 class="card-title">Vanilla Latte</h5>
-                                <p class="card-text">
-                                    Un espresso suave y fragante se
-                                    combina con leche sedosa y un toque de vainilla,
-                                    creando una bebida reconfortante con un sabor dulce y envolvente.
-                                    Perfecto para momentos de relajación y placer.
-                                </p>
-                            </div>
-                            <div class="card-body">
-                                <div class="d-flex flex-column align-items-center">
-                                    <button class="btn btn-danger col-12 text-center mb-1">COMPRAR</button>
-                                    <button class="btn btn-primary col-12 text-center mb-1">AGREGAR AL CARRITO</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Café Menta Delicia -->
-                    <div class="col">
-                        <div class="card card-capsulas h-100 bg-light bg-opacity-25">
-                            <img src="../assets/img/capsulas/Café Menta Delicia.png" class="card-img-top mt-2"
-                                alt="Café Menta Delicia" />
-                            <div class="card-body">
-                                <h5 class="card-title">Café Menta Delicia</h5>
-                                <p class="card-text">Esta cápsula combina la
-                                    intensidad del espresso con la frescura de la menta y un toque de cacao.
-                                    El resultado es una bebida vigorizante con un equilibrio perfecto entre la amargura
-                                    del
-                                    café y el frescor de la menta.
-                                </p>
-                            </div>
-                            <div class="card-body">
-                                <div class="d-flex flex-column align-items-center">
-                                    <button class="btn btn-danger col-12 text-center mb-1">COMPRAR</button>
-                                    <button class="btn btn-primary col-12 text-center mb-1">AGREGAR AL CARRITO</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Café Nicaragua -->
-                    <div class="col">
-                        <div class="card card-capsulas h-100 bg-light bg-opacity-25">
-                            <img src="../assets/img/capsulas/Café Nicaragua.png" class="card-img-top mt-2"
-                                alt="Café Nicaragua" />
-                            <div class="card-body">
-                                <h5 class="card-title">Café Nicaragua</h5>
-                                <p class="card-text">Esta cápsula ofrece un café de
-                                    origen único, cultivado en la región de Yirgacheffe.
-                                    Su sabor distintivo se caracteriza por sus notas de cítricos, flores y un toque de
-                                    chocolate negro, creando una experiencia aromática y exótica.
-                                </p>
-                            </div>
-                            <div class="card-body">
-                                <div class="d-flex flex-column align-items-center">
-                                    <button class="btn btn-danger col-12 text-center mb-1">COMPRAR</button>
-                                    <button class="btn btn-primary col-12 text-center mb-1">AGREGAR AL CARRITO</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Café de Colombia Suave -->
-                    <div class="col">
-                        <div class="card card-capsulas h-100 bg-light bg-opacity-25">
-                            <img src="../assets/img/capsulas/Café de Colombia Suave.png" class="card-img-top mt-2"
-                                alt="Palm Springs Road" />
-                            <div class="card-body">
-                                <h5 class="card-title">Café de Colombia Suave</h5>
-                                <p class="card-text">Esta cápsula combina la
-                                    intensidad del espresso con la frescura de la menta y un toque de cacao.
-                                    El resultado es una bebida vigorizante con un equilibrio perfecto entre la amargura
-                                    del
-                                    café y el frescor de la menta.
-                                </p>
-                            </div>
-                            <div class="card-body">
-                                <div class="d-flex flex-column align-items-center">
-                                    <button class="btn btn-danger col-12 text-center mb-1">COMPRAR</button>
-                                    <button class="btn btn-primary col-12 text-center mb-1">AGREGAR AL CARRITO</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Descafeinado Delicado -->
-                    <div class="col">
-                        <div class="card card-capsulas h-100 bg-light bg-opacity-25">
-                            <img src="../assets/img/capsulas/Descafeinado Delicado.png" class="card-img-top mt-2"
-                                alt="Descafeinado Delicado" />
-                            <div class="card-body">
-                                <h5 class="card-title">Descafeinado Delicado</h5>
-                                <p class="card-text">Esta cápsula ofrece un espresso
-                                    descafeinado con cuerpo y suavidad, preservando la riqueza de los sabores sin la
-                                    estimulación de la cafeína.
-                                    Perfecto para disfrutar de un café relajante en cualquier momento del día.
-                                </p>
-                            </div>
-                            <div class="card-body">
-                                <div class="d-flex flex-column align-items-center">
-                                    <button class="btn btn-danger col-12 text-center mb-1">COMPRAR</button>
-                                    <button class="btn btn-primary col-12 text-center mb-1">AGREGAR AL CARRITO</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </main>
-        <footer class="mt-4">
-            <a class="text-center text-white d-block lead" style="background-color: #834F29; text-decoration: none;"
-                href="../pages/servicioTecnico.html">SERVICIO TÉCNICO - SOBRE NOSOTROS</a>
-        </footer>
-    </div>
+        </nav>
+    </header>
+    <main>
+        <div class="mt-2">
+            <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1 g-4 p-5"
+                id="productosCapsulas">
+
+            </div>
+        </div>
+    </main>
+    <footer class="mt-4">
+        <a class="text-center text-white d-block lead" style="background-color: #834F29; text-decoration: none;"
+            href="../pages/servicioTecnico.html">SERVICIO TÉCNICO - SOBRE NOSOTROS</a>
+    </footer>
+    <script src="../assets/js/capsulas.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>

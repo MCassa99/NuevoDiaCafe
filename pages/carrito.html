@@ -20,262 +20,183 @@
 </head>
 
 <body>
-    <div class="bg-image" style="background: url('./assets/img/bgMainIMG.jpg') repeat-x center center fixed; background-size: cover; 
-            overflow-x: hidden;">
-        <header>
-            <p><b>UN NUEVO INICIO PARA TUS MAÑANAS</b></p>
-            <nav class="navbar navbar-expand navbar-dark">
-                <div class="container-fluid">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- LOGO -->
-                        <a class="navbar-brand mt-2 mt-lg-0 ml-4" href="../index.html">
-                            <img src="../assets/img/logo.png" height="80" />
-                        </a>
-                        <!-- Opciones de Navbar -->
-                        <ul class="navbar-nav me-auto mb-2 mb-0">
-                            <li class="nav-item d-lg-block d-xl-block d-none">
-                                <a class="nav-link" href="./maquinas.html">MAQUINAS</a>
+    <header>
+        <p><b>UN NUEVO INICIO PARA TUS MAÑANAS</b></p>
+        <nav class="navbar navbar-expand navbar-dark">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- LOGO -->
+                    <a class="navbar-brand mt-2 mt-lg-0 ml-4" href="../index.html">
+                        <img src="../assets/img/logo.png" height="80" />
+                    </a>
+                    <!-- Opciones de Navbar -->
+                    <ul class="navbar-nav me-auto mb-2 mb-0">
+                        <li class="nav-item d-lg-block d-xl-block d-none">
+                            <a class="nav-link" href="./maquinas.html">MAQUINAS</a>
+                        </li>
+                        <li class="nav-item d-lg-block d-xl-block d-none">
+                            <a class="nav-link" href="./capsulas.html">CÁPSULAS</a>
+                        </li>
+                        <li class="nav-item d-lg-block d-xl-block d-none">
+                            <a class="nav-link" href="#">FILTROS</a>
+                        </li>
+                        <li class="nav-item d-lg-block d-xl-block d-none">
+                            <a class="nav-link" href="#">CAFÉ</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Perfil y Carrito -->
+                <div class="d-flex align-items-center">
+                    <!-- Perfil -->
+
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-secondary dropdown-toggle  d-lg-block d-xl-block d-none"
+                            data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            <img src="../assets/img/user-icon-white.png" class="rounded-circle" height="25" />
+                        </button>
+                        <button type="button" class="btn btn-secondary dropdown-toggle d-lg-none d-xl-none"
+                            data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            <img src="../assets/img/menu-icon.png" class="rounded-circle" height="25" />
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-end">
+                            <img src="../assets/img/user-icon.png" class="m-1 rounded-circle" height="25" />
+                            Usuario
+                            <li>
+                                <hr class="dropdown-divider">
                             </li>
-                            <li class="nav-item d-lg-block d-xl-block d-none">
-                                <a class="nav-link" href="./capsulas.html">CÁPSULAS</a>
+                            <li class="d-lg-block d-xl-block d-none">
+                                <a class="dropdown-item" href="#">Mi Cuenta</a>
                             </li>
-                            <li class="nav-item d-lg-block d-xl-block d-none">
-                                <a class="nav-link" href="#">FILTROS</a>
+                            <li>
+                                <a class="dropdown-item" href="#"></a>
                             </li>
-                            <li class="nav-item d-lg-block d-xl-block d-none">
-                                <a class="nav-link" href="#">CAFÉ</a>
+                            <li class="d-lg-block d-xl-block d-none">
+                                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                            </li>
+
+                            <li class=" d-lg-none d-xl-none">
+                                <a class="dropdown-item" href="./maquinas.html">MAQUINAS</a>
+                            </li>
+                            <li class=" d-lg-none d-xl-none">
+                                <a class="dropdown-item" href="./capsulas.html">CÁPSULAS</a>
+                            </li>
+                            <li class=" d-lg-none d-xl-none">
+                                <a class="dropdown-item" href="#">FILTROS</a>
+                            </li>
+                            <li class=" d-lg-none d-xl-none">
+                                <a class="dropdown-item" href="#">CAFÉ</a>
                             </li>
                         </ul>
                     </div>
-                    <!-- Perfil y Carrito -->
-                    <div class="d-flex align-items-center">
-                        <!-- Perfil -->
-
-                        <div class="dropdown">
-                            <button type="button"
-                                class="btn btn-secondary dropdown-toggle  d-lg-block d-xl-block d-none"
-                                data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                                <img src="../assets/img/user-icon-white.png" class="rounded-circle" height="25" />
-                            </button>
-                            <button type="button" class="btn btn-secondary dropdown-toggle d-lg-none d-xl-none"
-                                data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                                <img src="../assets/img/menu-icon.png" class="rounded-circle" height="25" />
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-end">
-                                <img src="../assets/img/user-icon.png" class="m-1 rounded-circle" height="25" />
-                                Usuario
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li class="d-lg-block d-xl-block d-none">
-                                    <a class="dropdown-item" href="#">Mi Cuenta</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"></a>
-                                </li>
-                                <li class="d-lg-block d-xl-block d-none">
-                                    <a class="dropdown-item" href="#">Cerrar Sesión</a>
-                                </li>
-
-                                <li class=" d-lg-none d-xl-none">
-                                    <a class="dropdown-item" href="./maquinas.html">MAQUINAS</a>
-                                </li>
-                                <li class=" d-lg-none d-xl-none">
-                                    <a class="dropdown-item" href="./capsulas.html">CÁPSULAS</a>
-                                </li>
-                                <li class=" d-lg-none d-xl-none">
-                                    <a class="dropdown-item" href="#">FILTROS</a>
-                                </li>
-                                <li class=" d-lg-none d-xl-none">
-                                    <a class="dropdown-item" href="#">CAFÉ</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
-            </nav>
-        </header>
-        <main>
-            <div class="mt-2 mx-2">
-                <div class="container rounded-5 bg-light bg-opacity-50">
-                    <div class="row d-flex justify-content-center align-items-center">
-                        <div class="col p-4">
-                            <div class="row">
-                                <div class="col-lg-7">
-                                    <div class="d-flex justify-content-between align-items-center mb-4">
-                                        <div class="col align-center">
-                                            <p class="h2 text-dark">Carrito</p>
-                                            <p class="mb-0">Tienes 2 items en el carrito.</p>
-                                        </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="mt-2 mx-2">
+            <div class="container rounded-5 bg-light bg-opacity-50">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col p-4">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="col-11 align-center">
+                                        <p class="h2 text-dark">Carrito</p>
+                                        <!-- Se agrega la cantidad de items -->
+                                        <p class="mb-0" id="cantItems"></p>
                                     </div>
-                                    <!-- Producto 1 -->
-                                    <div class="p-3 rounded-4 mb-3 bg-light bg-opacity-50">
-                                        <div class="d-flex justify-content-between">
-                                            <div class="d-flex align-items-center">
-                                                <img src="../assets/img/capsulas/Café de Colombia Suave.png"
-                                                    class="img-fluid rounded-3 d-sm-block d-none" alt="Shopping item"
-                                                    style="width: 65px;">
-                                                <div class="ms-3 mt-3">
-                                                    <h5 class="text-dark">Café de Colombia</h5>
-                                                    <p class="small mb-0 d-sm-block d-none">Café 100% arábica de origen colombiano</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-row align-items-center">
-                                                <div style="width: 50px;">
-                                                    <h5 class="fw-normal mb-0 d-sm-block d-none">2</h5>
-                                                </div>
-                                                <div class="xs-clear" style="width: 80px;">
-                                                    <h5 class="mb-0 d-sm-block d-none">$500</h5>
-                                                    <h5 class="mb-0 d-block d-sm-none">$1000</h5>
-                                                </div>
-                                                <a class="icon-link" href="#">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        fill="black" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                                        <path
-                                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Producto 2 -->
-                                    <div class="p-3 rounded-4 mb-3 bg-light bg-opacity-50">
-                                        <div class="d-flex justify-content-between">
-                                            <div class="d-flex align-items-center">
-                                                <img src="../assets/img/maquinas/prod2.png"
-                                                    class="img-fluid rounded-3 d-sm-block d-none" alt="Shopping item"
-                                                    style="width: 65px;">
-                                                <div class="ms-3 mt-3">
-                                                    <h5 class="text-dark">BeanTastic SmartBrewer</h5>
-                                                    <p class="small mb-0 d-sm-block d-none">Cafetera Inteligente</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-row align-items-center">
-                                                <div style="width: 50px;">
-                                                    <h5 class="fw-normal mb-0 d-sm-block d-none">1</h5>
-                                                </div>
-                                                <div class="xs-clear" style="width: 80px;">
-                                                    <h5 class="mb-0">$2500</h5>
-                                                </div>
-                                                <a class="icon-link" href="#">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        fill="black" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                                        <path
-                                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Producto 3 -->
-                                    <div class="rounded-4 mb-3 bg-light bg-opacity-50 p-3">
-                                        <div class="d-flex justify-content-between">
-                                            <div class="d-flex align-items-center">
-                                                <img src="../assets/img/capsulas/Descafeinado Delicado.png"
-                                                    class="img-fluid rounded-3 d-sm-block d-none" alt="Shopping item"
-                                                    style="width: 65px;">
-                                                <div class="ms-3 mt-3">
-                                                    <h5 class="text-dark">Descafeinado Delicado</h5>
-                                                    <p class="small mb-0 d-sm-block d-none">Descafeinado con cuerpo y suavidad
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-row align-items-center">
-                                                <div style="width: 50px;">
-                                                    <h5 class="fw-normal mb-0 d-sm-block d-none">1</h5>
-                                                </div>
-                                                <div class="xs-clear" style="width: 80px;">
-                                                    <h5 class="mb-0 d-sm-block d-none">$500</h5>
-                                                    <h5 class="mb-0 d-block d-sm-none">$1000</h5>
-                                                </div>
-                                                <a class="icon-link" href="#">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        fill="black" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                                        <path
-                                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                </div>
+                                <!-- Add Products -->
+                                <div id="setProducts">
 
                                 </div>
-                                <div class="col-lg-5 bg-dark bg-opacity-75 text-white rounded-5">
-                                    <div class="card-body p-4">
-                                        <div class="row">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="mb-0">Detalles de Pago</h5>
-                                                <img src="../assets/img/user-icon-white.png" class="img-fluid rounded-3"
-                                                    style="width: 45px;" alt="Avatar">
-                                            </div>
+                            </div>
+                            <div class="col-lg-5 bg-dark bg-opacity-75 text-white rounded-5">
+                                <div class="card-body p-4">
+                                    <div class="row">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h5 class="mb-0">Detalles de Pago</h5>
+                                            <img src="../assets/img/user-icon-white.png" class="img-fluid rounded-3"
+                                                style="width: 45px;" alt="Avatar">
                                         </div>
-                                        <div class="d-flex align-items-center mb-3 mt-3">
-                                            <img class="ccard" src="../assets/img/cc-mastercard.svg"
-                                                alt="MasterCard">
-                                            <img class="ccard" src="../assets/img/cc-visa.svg" alt="Visa">
-                                            <img class="ccard" src="../assets/img/cc-paypal.svg" alt="Paypal">
-                                        </div>
-
-                                        <form class="mt-4">
-                                            <div class="form-group mb-4">
-                                                <input type="text" id="typeName" class="form-control form-control-lg" placeholder="Nombre de Titular de Tarjeta">
-                                            </div>
-                                            <div class="form-group mb-4">
-                                                <input type="text" id="typeText" class="form-control form-control-lg" placeholder="1234 5678 9012 3457" minlength="19" maxlength="19">
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-12">
-                                                    <div class="form-group mb-4">
-                                                        <input type="text" id="typeExp" class="form-control form-control-lg" placeholder="MM/YYYY" minlength="7" maxlength="7">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-sm-12">
-                                                    <div class="form-group mb-4">
-                                                        <input type="password" id="typeText" class="form-control form-control-lg" placeholder="&#9679;&#9679;&#9679;" minlength="3" maxlength="3">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-
-                                        <hr class="my-4">
-                                        <div class="d-flex justify-content-between">
-                                            <p class="mb-2">Subtotal</p>
-                                            <p class="mb-2">$3500.00</p>
-                                        </div>
-
-                                        <div class="d-flex justify-content-between">
-                                            <p class="mb-2">Envio</p>
-                                            <p class="mb-2">$20.00</p>
-                                        </div>
-
-                                        <div class="d-flex justify-content-between mb-4">
-                                            <p class="mb-2">Total(Incl. taxes)</p>
-                                            <p class="mb-2">$4720.00</p>
-                                        </div>
-
-                                        <button type="button"
-                                            class="btn btn-primary btn-block btn-lg col-12 text-center">
-                                            <span>PAGAR</span>
-                                        </button>
                                     </div>
+                                    <div class="d-flex align-items-center mb-3 mt-3">
+                                        <img class="ccard" src="../assets/img/cc-mastercard.svg" alt="MasterCard">
+                                        <img class="ccard" src="../assets/img/cc-visa.svg" alt="Visa">
+                                        <img class="ccard" src="../assets/img/cc-paypal.svg" alt="Paypal">
+                                    </div>
+
+                                    <form class="mt-4">
+                                        <div class="form-group mb-4">
+                                            <input type="text" id="typeName" class="form-control form-control-lg"
+                                                placeholder="Nombre de Titular de Tarjeta">
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <input type="text" id="card" class="form-control form-control-lg"
+                                                placeholder="1234 5678 9012 3457" minlength="19" maxlength="19">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="form-group mb-4">
+                                                    <input type="text" id="typeExp" class="form-control form-control-lg"
+                                                        placeholder="MM/YYYY" minlength="6" maxlength="6">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="form-group mb-4">
+                                                    <input type="password" id="pass"
+                                                        class="form-control form-control-lg"
+                                                        placeholder="&#9679;&#9679;&#9679;" minlength="3" maxlength="3">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" id="opPago"
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Si desea pagar con efectivo chequee esta opcion.
+                                            </label>
+                                        </div>
+                                    </form>
+
+                                    <hr class="my-4">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">Subtotal</p>
+                                        <p class="mb-2" id="subtotal"></p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">Envio</p>
+                                        <p class="mb-2" id="envio"></p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between mb-4">
+                                        <p class="mb-2">Total (Incl. Imp)</p>
+                                        <p class="mb-2" id="total"></p>
+                                    </div>
+
+                                    <button type="button" onclick="checkPay()"
+                                        class="btn btn-primary btn-block btn-lg col-12 text-center">
+                                        <span>PAGAR</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
-        <footer class="mt-4">
-            <a class="text-center text-white d-block fs-5 lead"
-                style="background-color: #834F29; text-decoration: none;" href="../pages/servicioTecnico.html">SERVICIO
-                TÉCNICO - SOBRE NOSOTROS</a>
-        </footer>
-    </div>
+        </div>
+    </main>
+    <footer class="mt-4">
+        <a class="text-center text-white d-block fs-5 lead" style="background-color: #834F29; text-decoration: none;"
+            href="../pages/servicioTecnico.html">SERVICIO
+            TÉCNICO - SOBRE NOSOTROS</a>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+    <script src="../assets/js/capsulas.js"></script>
+    <script src="../assets/js/carrito.js"></script>
 </body>
 
 </html>
