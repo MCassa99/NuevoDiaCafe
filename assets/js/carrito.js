@@ -1,4 +1,3 @@
-let cartProdCont = 0;
 let flashCart = localStorage.getItem('flashCart');
 
 const cantItems = document.getElementById('cantItems');
@@ -42,10 +41,8 @@ function createProduct(id, name, price, img, desc, cant) {
 function addCart(prodID, cant) {
     for (const product of products) {
         if (product.id == prodID) {
-            cartProdCont++;
-            cantItems.innerHTML = `Tienes ${cartProdCont} items en el carrito.`;
             let itemAnterior = document.getElementById(product.name);
-            if (!itemAnterior){
+            if (!itemAnterior) {
                 document.getElementById('setProducts').innerHTML += createProduct(product.id, product.name, product.price, product.img, product.desc, cant);
             }
         }
@@ -53,26 +50,19 @@ function addCart(prodID, cant) {
 }
 
 function removeCart(id) {
-    cartProdCont--;
-    let cont = -1;
     let newCartRemoved = [];
     for (const itemID of cart) {
-        let index = cart.indexOf(id);
-        console.log(index);
-        if ((id != itemID) || (cont >= 0)) {
-            newCartRemoved[index] = id;
-        } else {
-            cont++;
+        if (itemID != id) {
+            newCartRemoved.push(itemID);
         }
     }
-    let childID = 'prod'+id;
-    document.getElementById(childID).remove();
     cart = newCartRemoved;
     localStorage.setItem('primaryCart', JSON.stringify(cart));
     cargarCarrito();
 }
 
 function refreshCant(id) {
+    let newCartRefreshed = [];
     let price = document.getElementById('price' + id);
     let cant = document.getElementById('cant' + id).value;
     let newPrice;
@@ -82,19 +72,28 @@ function refreshCant(id) {
         }
     }
     price.innerHTML = newPrice;
+    for (const itemID of cart) {
+        if (itemID != id) {
+            newCartRefreshed.push(itemID);
+        }
+    }
+    for (let index = 0; index < cant; index++) {
+        newCartRefreshed.push(id);
+    }
+    cart = newCartRefreshed;
 }
 
 window.onload = cargarCarrito();
 
 function cargarCarrito() {
-    cantItems.innerHTML = `Tienes ${cartProdCont} items en el carrito.`;
+    document.getElementById('setProducts').innerHTML = "";
+    cantItems.innerHTML = `Tienes ${cart.length} items en el carrito.`;
     if (flashCart == null || flashCart == '') {
         if (cart != null) {
             newCart = countCart(cart);
             //muestra carrito primario
             for (const id of cart) {
                 addCart(id, newCart[id]);
-                refreshCant(id);
             }
             calcularCarrito(cart);
         }
@@ -107,7 +106,7 @@ function cargarCarrito() {
 
 function countCart(list) {
     newCart = {};
-    for (const item of list){
+    for (const item of list) {
         if (newCart[item]) {
             newCart[item]++;
         } else {
@@ -117,7 +116,7 @@ function countCart(list) {
     return newCart;
 }
 
-function calcularCarrito(list){
+function calcularCarrito(list) {
     let subtotal = 0;
     let envio = 0;
     let contEnvio = 0;
@@ -126,25 +125,26 @@ function calcularCarrito(list){
         for (const itemList of products) {
             if (item == itemList.id) {
                 subtotal += itemList.price;
+                refreshCant(itemList.id);
                 contEnvio += 1;
             }
         }
     }
     if (contEnvio > 0)
-        envio += 60*contEnvio;
+        envio += 60 * contEnvio;
     if (contEnvio > 5)
-        envio += 30*contEnvio;
+        envio += 30 * contEnvio;
     if (contEnvio > 10)
-        envio += 15*contEnvio;
+        envio += 15 * contEnvio;
     if (subtotal > 4000)
         envio = 0;
 
-    document.getElementById('total').innerHTML = ((subtotal + envio)*1.22).toFixed(0);
+    document.getElementById('total').innerHTML = ((subtotal + envio) * 1.22).toFixed(0);
     document.getElementById('subtotal').innerHTML = subtotal;
     document.getElementById('envio').innerHTML = envio;
 }
 
-function checkPay(){
+function checkPay() {
     if (flashCart != null || flashCart != '' || cart != null) {
         total = document.getElementById('total').innerHTML;
     } else {
