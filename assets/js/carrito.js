@@ -1,6 +1,5 @@
 let cartProdCont = 0;
 let flashCart = localStorage.getItem('flashCart');
-let cart = JSON.parse(localStorage.getItem('primaryCart'));
 
 const cantItems = document.getElementById('cantItems');
 const ErrorPago = 'Contraseña Invalida.'
@@ -21,13 +20,13 @@ function createProduct(id, name, price, img, desc, cant) {
                             <div class="d-flex flex-row align-items-center">
                                 <div style="width: 100px;">
                                     <div class="product-quantity">
-                                        <input class="fw-normal mb-0 d-sm-block d-none" type="number" onchange="refreshCant(${id})" id="cant${id}" value="${cant}" min="1" max="5">
+                                        <input class="fw-normal mb-0 d-sm-block d-none" type="number" onchange="refreshCant(${id})" id="cant${id}" value="${cant}" min="1" max="15">
                                     </div>
                                 </div>
                                 <div class="xs-clear" style="width: 80px;">
                                     <h5 class="mb-0" id="price${id}">${price}</h5>
                                 </div>
-                                <a class="icon-link" href="#" onclick="removeCart('prod${id}')">
+                                <a class="icon-link" href="#" onclick="removeCart('${id}')">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                         fill="black" class="bi bi-trash3-fill" viewBox="0 0 16 16">
                                         <path
@@ -47,33 +46,47 @@ function addCart(prodID, cant) {
             cantItems.innerHTML = `Tienes ${cartProdCont} items en el carrito.`;
             let itemAnterior = document.getElementById(product.name);
             if (!itemAnterior){
-                document.getElementById('setProducts').innerHTML += createProduct(cartProdCont, product.name, product.price, product.img, product.desc, cant);
+                document.getElementById('setProducts').innerHTML += createProduct(product.id, product.name, product.price, product.img, product.desc, cant);
             }
         }
     }
 }
 
 function removeCart(id) {
-    let child = document.getElementById(id).remove();
-    let cont = 0;
     cartProdCont--;
-    cantItems.innerHTML = `Tienes ${cartProdCont} items en el carrito.`;
-    for (idItem of cart) {
-        primaryCart = [];
-        if (id == idItem && cont == 0)
+    let cont = -1;
+    let newCartRemoved = [];
+    for (const itemID of cart) {
+        let index = cart.indexOf(id);
+        console.log(index);
+        if ((id != itemID) || (cont >= 0)) {
+            newCartRemoved[index] = id;
+        } else {
             cont++;
-        else
-            agregarAlCarrito(idItem);
+        }
     }
+    let childID = 'prod'+id;
+    document.getElementById(childID).remove();
+    cart = newCartRemoved;
+    localStorage.setItem('primaryCart', JSON.stringify(cart));
+    cargarCarrito();
 }
 
 function refreshCant(id) {
-    let price = document.getElementById('price' + id).innerText;
-    let cant = document.getElementById('cant' + id).innerText;
-    price = parseInt(cant) * parseInt(price);
+    let price = document.getElementById('price' + id);
+    let cant = document.getElementById('cant' + id).value;
+    let newPrice;
+    for (const product of products) {
+        if (product.id == id) {
+            newPrice = cant * product.price;
+        }
+    }
+    price.innerHTML = newPrice;
 }
 
-window.onload = function cargarCarrito() {
+window.onload = cargarCarrito();
+
+function cargarCarrito() {
     cantItems.innerHTML = `Tienes ${cartProdCont} items en el carrito.`;
     if (flashCart == null || flashCart == '') {
         if (cart != null) {
@@ -81,6 +94,7 @@ window.onload = function cargarCarrito() {
             //muestra carrito primario
             for (const id of cart) {
                 addCart(id, newCart[id]);
+                refreshCant(id);
             }
             calcularCarrito(cart);
         }
@@ -107,9 +121,8 @@ function calcularCarrito(list){
     let subtotal = 0;
     let envio = 0;
     let contEnvio = 0;
-    
+
     for (const item of list) {
-        console.log(item);
         for (const itemList of products) {
             if (item == itemList.id) {
                 subtotal += itemList.price;
