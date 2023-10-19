@@ -59,16 +59,12 @@ const products = [
 ];
 
 let cart = JSON.parse(localStorage.getItem('primaryCart'));
-let primaryCart;
 
 if (cart == null) {
     primaryCart = [];
 } else {
     primaryCart = cart; 
 }
-
-let username = localStorage.getItem('username');
-let password = localStorage.getItem('password');
 
 function createProductCard(title, img, description, id){
     let card = 

@@ -1,4 +1,3 @@
-let cartProdCont = 0;
 let flashCart = localStorage.getItem('flashCart');
 
 const cantItems = document.getElementById('cantItems');
@@ -20,7 +19,7 @@ function createProduct(id, name, price, img, desc, cant) {
                             <div class="d-flex flex-row align-items-center">
                                 <div style="width: 100px;">
                                     <div class="product-quantity">
-                                        <input class="fw-normal mb-0 d-sm-block d-none" type="number" onchange="refreshCant(${id})" id="cant${id}" value="${cant}" min="1" max="15">
+                                        <input class="fw-normal mb-0 d-sm-block d-none" type="number" onchange="refreshCart(${id})" id="cant${id}" value="${cant}" min="1" max="15">
                                     </div>
                                 </div>
                                 <div class="xs-clear" style="width: 80px;">
@@ -42,8 +41,6 @@ function createProduct(id, name, price, img, desc, cant) {
 function addCart(prodID, cant) {
     for (const product of products) {
         if (product.id == prodID) {
-            cartProdCont++;
-            cantItems.innerHTML = `Tienes ${cartProdCont} items en el carrito.`;
             let itemAnterior = document.getElementById(product.name);
             if (!itemAnterior){
                 document.getElementById('setProducts').innerHTML += createProduct(product.id, product.name, product.price, product.img, product.desc, cant);
@@ -53,20 +50,12 @@ function addCart(prodID, cant) {
 }
 
 function removeCart(id) {
-    cartProdCont--;
-    let cont = -1;
     let newCartRemoved = [];
     for (const itemID of cart) {
-        let index = cart.indexOf(id);
-        console.log(index);
-        if ((id != itemID) || (cont >= 0)) {
-            newCartRemoved[index] = id;
-        } else {
-            cont++;
+        if (id != itemID) {
+            newCartRemoved.push(itemID);
         }
     }
-    let childID = 'prod'+id;
-    document.getElementById(childID).remove();
     cart = newCartRemoved;
     localStorage.setItem('primaryCart', JSON.stringify(cart));
     cargarCarrito();
@@ -84,13 +73,33 @@ function refreshCant(id) {
     price.innerHTML = newPrice;
 }
 
+function refreshCart(id){
+    let cant = document.getElementById('cant' + id).value;
+    let newCartRefreshed = [];
+    for (const itemID of cart) {
+        if (id != itemID) {
+            newCartRefreshed.push(itemID);
+            console.log(itemID);
+        }
+    }
+    for (let index = 0; index < cant; index++) {
+        newCartRefreshed.push(id);
+    }
+    cart = newCartRefreshed;
+    localStorage.setItem('primaryCart', JSON.stringify(cart));
+    refreshCant(id)
+    cargarCarrito();
+}
+
 window.onload = cargarCarrito();
 
 function cargarCarrito() {
-    cantItems.innerHTML = `Tienes ${cartProdCont} items en el carrito.`;
+    cart.sort();
+    cantItems.innerHTML = `Tienes ${cart.length} items en el carrito.`;
+    document.getElementById('setProducts').innerHTML = '';
     if (flashCart == null || flashCart == '') {
         if (cart != null) {
-            newCart = countCart(cart);
+            let newCart = countCart(cart);
             //muestra carrito primario
             for (const id of cart) {
                 addCart(id, newCart[id]);
@@ -145,8 +154,9 @@ function calcularCarrito(list){
 }
 
 function checkPay(){
-    if (flashCart != null || flashCart != '' || cart != null) {
-        total = document.getElementById('total').innerHTML;
+    if (flashCart != null || flashCart != '' || cart != null || cart == []) {
+        
+        console.log('COMPRADO');
     } else {
         alert('NO POSEE ARTICULOS EN EL CARRITO.');
     }
