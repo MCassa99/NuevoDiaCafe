@@ -169,17 +169,17 @@ function verificarTarjeta() {
 
     if (nombre != '') {
         if (tarjeta != '') {
-            if(validateCard()){
+            if (validateCard()) {
                 if (tarjeta.match(VISA)) {
-                    alert('El pago con su tarjeta VISA ha sido realizado con exito!');
+                    swal("VISA", "El pago con su tarjeta VISA ha sido realizado con exito!", "success")
                     return true;
                 } else {
                     if (tarjeta.match(MASTERCARD)) {
-                        alert('El pago con su tarjeta MASTERCARD ha sido realizado con exito!');
+                        swal("MASTERCARD", "El pago con su tarjeta MASTERCARD ha sido realizado con exito!", "success")
                         return true;
                     } else {
                         if (tarjeta.toUpperCase().match(PAYPAL)) {
-                            alert('El pago con PAYPAL ha sido realizado con exito!');
+                            swal("PAYPAL", "El pago con su tarjeta PAYPAL ha sido realizado con exito!", "info")
                             return true;
                         } else {
                             mostrarErrores(1, 'TVal');
@@ -208,16 +208,16 @@ function mostrarErrores(op, error) {
         case 1:
             switch (error) {
                 case 'ENom':
-                    alert('Porfavor Ingrese el Nombre de el Titular de la Tarjeta.')
+                    swal("Error en Formulario", "Porfavor Ingrese el Nombre de el Titular de la Tarjeta!", "error")
                     break;
                 case 'TVal':
-                    alert('Porfavor Ingrese una Tarjeta Valida o PAYPAL.')
+                    swal("Error en Formulario", "Porfavor Ingrese una Tarjeta Valida o PAYPAL.", "error")
                     break;
                 case 'ECVV':
-                    alert('Porfavor Ingrese el CVV de su Tarjeta.')
+                    swal("Error en Formulario", "Porfavor Ingrese el CVV de su Tarjeta.", "error")
                     break;
                 case 'ETar':
-                    alert('Porfavor Ingrese el Numero de su Tarjeta.')
+                    swal("Error en Formulario", "Porfavor Ingrese el Numero de su Tarjeta.", "error")
                     break;
                 default:
                     break;
@@ -235,20 +235,22 @@ function checkPay() {
     let deleteCart = [];
     if ((cart.length > 0) || flashCart) {
         if (efectivo.checked) {
-            alert('Pago Realizado con exito');
+            swal("Efectivo", "Pago Realizado con exito.", "success")
             payed = true;
         } else {
             payed = verificarTarjeta();
         }
-        if (payed){
+        if (payed) {
             if (flashCart) {
                 localStorage.setItem('flashCart', '');
             } else {
                 localStorage.setItem('primaryCart', JSON.stringify(deleteCart));
             }
-            window.location.replace('../../index.html');
+            setTimeout(function() {
+                window.location.replace('../../index.html')
+            }, 3000);
         }
     } else {
-        alert('NO POSEE ARTICULOS EN EL CARRITO.');
+        swal("Error en Carrito", "Su Carrito NO Posee Articulos.", "error")
     }
 }

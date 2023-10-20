@@ -58,6 +58,8 @@ const products = [
     }
 ];
 
+
+
 let cart = JSON.parse(localStorage.getItem('primaryCart'));
 
 if (cart == null) {
