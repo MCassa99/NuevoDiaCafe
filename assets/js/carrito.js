@@ -3,6 +3,11 @@ let flashCart = localStorage.getItem('flashCart');
 const cantItems = document.getElementById('cantItems');
 const ErrorPago = 'Contraseña Invalida.'
 
+const d = new Date();
+let month = d.getMonth() + 1;
+let year = d.getFullYear();
+if (month < 10) month = '0' + month;
+
 
 function createProduct(id, name, price, img, desc, cant) {
     let product = `<div id="prod${id}" class="p-3 rounded-4 mb-3 bg-light bg-opacity-50">
@@ -42,7 +47,7 @@ function addCart(prodID, cant) {
     for (const product of products) {
         if (product.id == prodID) {
             let itemAnterior = document.getElementById(product.name);
-            if (!itemAnterior){
+            if (!itemAnterior) {
                 document.getElementById('setProducts').innerHTML += createProduct(product.id, product.name, product.price, product.img, product.desc, cant);
             }
         }
@@ -73,13 +78,12 @@ function refreshCant(id) {
     price.innerHTML = newPrice;
 }
 
-function refreshCart(id){
+function refreshCart(id) {
     let cant = document.getElementById('cant' + id).value;
     let newCartRefreshed = [];
     for (const itemID of cart) {
         if (id != itemID) {
             newCartRefreshed.push(itemID);
-            console.log(itemID);
         }
     }
     for (let index = 0; index < cant; index++) {
@@ -94,6 +98,8 @@ function refreshCart(id){
 window.onload = cargarCarrito();
 
 function cargarCarrito() {
+    const monthControl = document.querySelector('input[type="month"]');
+    monthControl.value = `${year}-${month}`;
     cart.sort();
     cantItems.innerHTML = `Tienes ${cart.length} items en el carrito.`;
     document.getElementById('setProducts').innerHTML = '';
@@ -116,7 +122,7 @@ function cargarCarrito() {
 
 function countCart(list) {
     newCart = {};
-    for (const item of list){
+    for (const item of list) {
         if (newCart[item]) {
             newCart[item]++;
         } else {
@@ -126,7 +132,7 @@ function countCart(list) {
     return newCart;
 }
 
-function calcularCarrito(list){
+function calcularCarrito(list) {
     let subtotal = 0;
     let envio = 0;
     let contEnvio = 0;
@@ -140,23 +146,108 @@ function calcularCarrito(list){
         }
     }
     if (contEnvio > 0)
-        envio += 60*contEnvio;
+        envio += 60 * contEnvio;
     if (contEnvio > 5)
-        envio += 30*contEnvio;
+        envio += 30 * contEnvio;
     if (contEnvio > 10)
-        envio += 15*contEnvio;
+        envio += 15 * contEnvio;
     if (subtotal > 4000)
         envio = 0;
 
-    document.getElementById('total').innerHTML = ((subtotal + envio)*1.22).toFixed(0);
+    document.getElementById('total').innerHTML = ((subtotal + envio) * 1.22).toFixed(0);
     document.getElementById('subtotal').innerHTML = subtotal;
     document.getElementById('envio').innerHTML = envio;
 }
 
-function checkPay(){
-    if (flashCart != null || flashCart != '' || cart != null || cart == []) {
-        
-        console.log('COMPRADO');
+function verificarTarjeta() {
+    const VISA = /4(?:[0-9]{12}|[0-9]{15})/;
+    const MASTERCARD = /5[1-5][0-9]{14}/;
+    const PAYPAL = 'PAYPAL';
+
+    let nombre = document.getElementById('nameCredit').value;
+    let tarjeta = document.getElementById('card').value;
+
+    if (nombre != '') {
+        if (tarjeta != '') {
+            if(validateCard()){
+                if (tarjeta.match(VISA)) {
+                    alert('El pago con su tarjeta VISA ha sido realizado con exito!');
+                    return true;
+                } else {
+                    if (tarjeta.match(MASTERCARD)) {
+                        alert('El pago con su tarjeta MASTERCARD ha sido realizado con exito!');
+                        return true;
+                    } else {
+                        if (tarjeta.toUpperCase().match(PAYPAL)) {
+                            alert('El pago con PAYPAL ha sido realizado con exito!');
+                            return true;
+                        } else {
+                            mostrarErrores(1, 'TVal');
+                        }
+                    }
+                }
+            } else {
+                mostrarErrores(1, 'ECVV');
+            }
+        } else {
+            mostrarErrores(1, 'ETar');
+        }
+    } else {
+        mostrarErrores(1, 'ENom');
+    }
+}
+
+function validateCard() {
+    let cvv = document.getElementById('pass').value;
+    return (cvv != '');
+}
+
+function mostrarErrores(op, error) {
+    switch (op) {
+        //Tarjeta y Pago
+        case 1:
+            switch (error) {
+                case 'ENom':
+                    alert('Porfavor Ingrese el Nombre de el Titular de la Tarjeta.')
+                    break;
+                case 'TVal':
+                    alert('Porfavor Ingrese una Tarjeta Valida o PAYPAL.')
+                    break;
+                case 'ECVV':
+                    alert('Porfavor Ingrese el CVV de su Tarjeta.')
+                    break;
+                case 'ETar':
+                    alert('Porfavor Ingrese el Numero de su Tarjeta.')
+                    break;
+                default:
+                    break;
+            }
+            break;
+
+        default:
+            break;
+    }
+}
+
+function checkPay() {
+    let efectivo = document.getElementById('opPago');
+    let payed = false;
+    let deleteCart = [];
+    if ((cart.length > 0) || flashCart) {
+        if (efectivo.checked) {
+            alert('Pago Realizado con exito');
+            payed = true;
+        } else {
+            payed = verificarTarjeta();
+        }
+        if (payed){
+            if (flashCart) {
+                localStorage.setItem('flashCart', '');
+            } else {
+                localStorage.setItem('primaryCart', JSON.stringify(deleteCart));
+            }
+            window.location.replace('../../index.html');
+        }
     } else {
         alert('NO POSEE ARTICULOS EN EL CARRITO.');
     }
