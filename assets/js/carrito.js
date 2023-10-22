@@ -56,13 +56,18 @@ function addCart(prodID, cant) {
 
 function removeCart(id) {
     let newCartRemoved = [];
-    for (const itemID of cart) {
-        if (id != itemID) {
-            newCartRemoved.push(itemID);
+    if (flashCart == null || flashCart == '') {
+        for (const itemID of cart) {
+            if (id != itemID) {
+                newCartRemoved.push(itemID);
+            }
         }
+        cart = newCartRemoved;
+        localStorage.setItem('primaryCart', JSON.stringify(cart));
+    } else {
+        localStorage.setItem('flashCart', '');
+        window.location.replace('../../pages/carrito.html');
     }
-    cart = newCartRemoved;
-    localStorage.setItem('primaryCart', JSON.stringify(cart));
     cargarCarrito();
 }
 
@@ -138,14 +143,24 @@ function calcularCarrito(list) {
     let envio = 0;
     let contEnvio = 0;
 
-    for (const item of list) {
+    if (Array.isArray(list)) {
+        for (const item of list) {
+            for (const itemList of products) {
+                if (item == itemList.id) {
+                    subtotal += itemList.price;
+                    contEnvio += 1;
+                }
+            }
+        }
+    } else {
         for (const itemList of products) {
-            if (item == itemList.id) {
+            if (list == itemList.id) {
                 subtotal += itemList.price;
                 contEnvio += 1;
             }
         }
     }
+
     if (contEnvio > 0)
         envio += 60 * contEnvio;
     if (contEnvio > 5)
