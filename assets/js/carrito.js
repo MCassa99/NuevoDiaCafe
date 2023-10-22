@@ -1,12 +1,12 @@
-let flashCart = localStorage.getItem('flashCart');
-
 const cantItems = document.getElementById('cantItems');
-const ErrorPago = 'Contraseña Invalida.'
+let cart = JSON.parse(localStorage.getItem('primaryCart'));
 
 const d = new Date();
 let month = d.getMonth() + 1;
 let year = d.getFullYear();
 if (month < 10) month = '0' + month;
+const monthControl = document.querySelector('input[type="month"]');
+monthControl.value = `${year}-${month}`;
 
 
 function createProduct(id, name, price, img, desc, cant) {
@@ -44,14 +44,14 @@ function createProduct(id, name, price, img, desc, cant) {
 }
 
 function addCart(prodID, cant) {
-    for (const product of products) {
+    products.forEach(function (product) {
         if (product.id == prodID) {
             let itemAnterior = document.getElementById(product.name);
             if (!itemAnterior) {
                 document.getElementById('setProducts').innerHTML += createProduct(product.id, product.name, product.price, product.img, product.desc, cant);
             }
         }
-    }
+    });
 }
 
 function removeCart(id) {
@@ -95,11 +95,11 @@ function refreshCart(id) {
     cargarCarrito();
 }
 
-window.onload = cargarCarrito();
+window.onload = setTimeout(function () {
+    cargarCarrito();
+}, 500);
 
 function cargarCarrito() {
-    const monthControl = document.querySelector('input[type="month"]');
-    monthControl.value = `${year}-${month}`;
     cart.sort();
     cantItems.innerHTML = `Tienes ${cart.length} items en el carrito.`;
     document.getElementById('setProducts').innerHTML = '';
@@ -116,6 +116,7 @@ function cargarCarrito() {
     } else {
         //muestra carrito con compra flash
         addCart(flashCart, 1);
+        refreshCant(flashCart);
         calcularCarrito(flashCart);
     }
 }
@@ -246,7 +247,7 @@ function checkPay() {
             } else {
                 localStorage.setItem('primaryCart', JSON.stringify(deleteCart));
             }
-            setTimeout(function() {
+            setTimeout(function () {
                 window.location.replace('../../index.html')
             }, 3000);
         }

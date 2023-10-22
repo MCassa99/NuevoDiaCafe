@@ -2,7 +2,7 @@
   "name": "nuevodiacafe",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "scripts.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss ./scss/style.scss ./css/style.css",
@@ -15,6 +15,7 @@
     "nodemon": "^3.0.1"
   },
   "dependencies": {
+    "fs": "^0.0.1-security",
     "sweetalert": "^2.1.2",
     "sweetalert2": "^11.7.32"
   }
